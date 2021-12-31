@@ -1,24 +1,5 @@
-# README
+# Music Nimbus
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Music Nimbus is a clone of the music streaming service, Sound Cloud, with MusicNimbus you can discover and play a plethora of music to your liking!
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* This section is currently under review, more details will be added as features finish development.
