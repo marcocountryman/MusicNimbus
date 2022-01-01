@@ -12,20 +12,15 @@ class User < ApplicationRecord
     attr_reader :password
     after_initialize :ensure_session_token
 
-
+    #THIS METHOD WILL RETRIEVE AND RETURN USER IF EMAIL AND PASSWORD IS CORRECT
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
-
-        if user && user.is_password?
-            user
-        else
-            nil
-        end
+        return nil unless user
+        user.is_password?(password) ? user : nil
     end
 
     def is_password?(password)
-        password_check = BCrypt::Password.new(self.password_digest)
-        password_check.is_password?(password)
+        BCrypt::Password.new(self.password_digest).is_password?(password)
     end
 
     def password=(password)

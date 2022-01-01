@@ -1,11 +1,13 @@
 class Api::SessionsController < ApplicationController
 
+    #COME BACK TO THIS CONTROLLER AND FIX THE RENDERS!!!!!
+
     def create 
         @user = User.find_by_credentials(
             params[:user][:email],
             params[:user][:password]
         )
-
+        debugger
         if @user
             login(@user)
             render "api/users/show"
@@ -18,7 +20,9 @@ class Api::SessionsController < ApplicationController
         @user = current_user
         if @user
             logout
-            render "api/users/show"
+
+            render json: "{}"
+            # render "api/users/show"
         else
             render json: ["No one here."], status: 404
         end
