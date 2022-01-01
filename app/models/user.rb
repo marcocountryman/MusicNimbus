@@ -5,7 +5,7 @@ class User < ApplicationRecord
     # ANOTHER NOTE: I will add more errors here
     # i.e. special characters in password and checking for @ symbol in email
     
-    validates :email, :display_name, :age, :session_token, :password_digest, presence:true
+    validates :email, :displayname, :age, :session_token, :password_digest, presence:true
     validates :email, uniqueness:true
     validates :password, length: {minimum: 8}, allow_nil:true
 
