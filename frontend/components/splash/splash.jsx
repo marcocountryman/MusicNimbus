@@ -14,9 +14,9 @@ class Splash extends React.Component {
             </div>
             :
             <div>
-                <Link to = "/signup">Sign Up</Link>
+                <Link to = "/signup">Create Account</Link>
                 <br/>
-                <Link to = "/login">Log In</Link>
+                <Link to = "/login">Sign In</Link>
             </div>
         )
     }
