@@ -12,17 +12,20 @@ class SignupForm extends React.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
     handleSubmit(e) {
         e.preventDefault;
         const user = Object.assign({}, this.state);
         this.props.signup(user);
     }
+
     update(field) {
 
         return (e) => {
             this.setState({ [field] : e.currentTarget.value})
         }
     }
+
     updateAge(age) {
        
         return (e) => {
@@ -32,6 +35,7 @@ class SignupForm extends React.Component {
             })
         }
     }
+    
     errorMessages() {
         return(
             <ul>

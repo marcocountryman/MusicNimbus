@@ -7,20 +7,23 @@ class LoginForm extends React.Component {
         this.state = {
             email: "",
             password: ""
-        }
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
     handleSubmit(e) {
         e.preventDefault;
         const user = Object.assign({}, this.state);
         this.props.login(user);
     }
+
     update(field) {
 
         return (e) => {
             this.setState({ [field] : e.currentTarget.value})
         }
     }
+
     errorMessages() {
         return(
             <ul>
