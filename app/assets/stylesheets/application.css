@@ -13,4 +13,5 @@
  *= require_tree .
  *= require_self
  */
-@import "reset/reset_css.scss"
+@import "reset/reset_css.scss";
+@import "splash/splash_header.scss";

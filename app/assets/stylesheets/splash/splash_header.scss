@@ -1,0 +1,49 @@
+.splash {
+    width: 1200px;
+    margin: auto;
+}
+
+.header-content {
+    background-image: url(https://cdn.pixabay.com/photo/2015/02/11/21/54/concert-633110_960_720.jpg);
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 25px;
+    background-size: 100% 100%;
+    background-position: center;
+}
+.header-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+.header-logo {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+.login-btn {
+    color: white;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid white;
+    height: 30px;
+    width: auto;
+    text-decoration: none;
+}
+.signup-btn {
+    text-decoration: none;
+    background-color: #ff004f;
+    height: 30px;
+    width: auto;
+    color: white;
+}
+button {
+    cursor: pointer;
+}
+.header-text {
+    color: white;
+}
