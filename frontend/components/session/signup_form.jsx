@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 class SignupForm extends React.Component {
 
@@ -35,7 +36,7 @@ class SignupForm extends React.Component {
             })
         }
     }
-    
+
     errorMessages() {
         return(
             <ul>
@@ -72,6 +73,7 @@ class SignupForm extends React.Component {
                      <br/>
                     <input type="submit" value = "Create Account" />
                 </form>
+                <Link to='/login'>Sign In Instead</Link>
             </div>
         )
     }
