@@ -8,7 +8,7 @@ const SplashBody = () => {
                 <h2 className = "splash-message-1">Hear what's trending for free in the Music Nimbus community</h2>
             </div>
             <div className = "splash-box-2">
-                    {/* <ul className = "song-lists">
+                    <ul className = "song-lists">
                         <li>
                             <label >Song 1</label>
                         </li>
@@ -45,7 +45,7 @@ const SplashBody = () => {
                         <li>
                             <label >Song 12</label>
                         </li>
-                    </ul> */}
+                    </ul>
             </div>
         </div>
     )
