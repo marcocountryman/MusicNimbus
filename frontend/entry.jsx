@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rootElement = document.getElementById('root');
     let store;
     if (window.currentUser) {
+        debugger
         const preloadedState = {
             entities: {
                 users: { [window.currentUser.id] : window.currentUser}

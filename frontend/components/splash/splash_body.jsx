@@ -71,6 +71,42 @@ const SplashBody = () => {
                         </li>
                     </ul>
             </div>
+            <div className = "splash-box-3">
+                <img src={window.mobilephoto} alt="mobilephoto" className="left-content"/>
+                <div className="right-content-container">
+                    <div className='right-content-items'>
+                        <h2 className = "right-content-message">Never Stop Listening</h2>
+                        <div className='right-content-color-effect'></div>
+                        <p className='right-content-info'>Music Nimbus is available on Web for best experience.</p>                 
+                        <div className='right-content-buttons'>
+                            <button className = "githubbutn">GitHub</button>
+                            <button className='linkedinbutn'>LinkedIn</button>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div className='splash-box-4'>
+                
+                    <div className='content-left-container'>
+                        <h2 className = "shoutout1">Calling all employers</h2>
+                        <p className = "shoutout2">I am available for immediate hire</p>
+                        <button className = "findout">Find out more</button>
+                    </div>
+               
+                <div className = "content-right-container">
+                    <img src={window.createphoto} alt="createphoto" className = "content-right-photo"/>
+                    <h2 className = "content-right-message">I ❤️ Music Nimbus</h2>
+                </div>
+            </div>
+            <div className = "splash-box-5">
+                <div className = "create-message-1">Thanks for listening. Now join in.</div>
+                <div className = "create-message-2">Save tracks, follow users, build playlists. All for free.</div>
+                <div className = "create-button-container"><button className = "create-button">Create Account</button></div>
+                <div className = "create-message-container">
+                    <p className = "create-signin-message">Already have an account?</p>
+                    <button className = "create-signin-butn">Sign In</button>
+                </div>
+            </div>
         </div>
     )
 }
