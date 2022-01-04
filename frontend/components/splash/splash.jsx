@@ -1,6 +1,7 @@
 import React from 'react';
 import SplashHeader from './splash_header';
 import SplashBody from './splash_body';
+import SplashFooter from './splash_footer';
 
 class Splash extends React.Component {
 
@@ -9,6 +10,7 @@ class Splash extends React.Component {
             <div className = "splash-content">
               <SplashHeader/>
               <SplashBody/>
+              <SplashFooter/>
             </div>
         )
     }
