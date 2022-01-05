@@ -11,12 +11,12 @@ const mSTP = (state) => {
 };
 
 const mDTP = (dispatch) => {
-
+    
     return {
         signup: user => dispatch(signup(user)),
         login: user => dispatch(login(user)),
         openModal: () => dispatch(openModal('login')),
-        closeModal: () => () => dispatch(closeModal())
+        closeModal: () => dispatch(closeModal())
 
     };
 };
