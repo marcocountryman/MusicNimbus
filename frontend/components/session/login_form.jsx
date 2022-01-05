@@ -51,31 +51,42 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <button onClick = {this.handleDemoUser}>Demo User</button>
-                <h2>Sign In</h2>
+            <div className = "session-form-container">
                 
+                <button onClick = {this.handleDemoUser} className='demo-butn'>
+                    Free Guest Pass
+                </button>
+                    {/* <div onClick={this.props.closeModal} className="close-x">X</div> */}
+                    
                 
-                <form onSubmit = {this.handleSubmit}>
-                    <div onClick={this.props.closeModal} className="close-x">X</div>
 
-                    {this.errorMessages()}
-                    <div className = "signup-form"> 
-                        <label> Email:
-                            <br/><input type="text" value = {this.state.email} onChange = {this.update("email")} />
-                        </label>
-                        <br/>
-                        <label> Password:
-                            <br/><input type="password" value = {this.state.password} onChange = {this.update("password")} />
-                        </label>
-                        <br/>
-                        <input type="submit" value = "Sign In" />
-                    </div>   
+                <form onSubmit = {this.handleSubmit} className = "session-form-login">
+
+                        
+                        <input type="text" 
+                        value = {this.state.email} 
+                        onChange = {this.update("email")}
+                        placeholder='Your Email'
+                        className='session-form-input' 
+                        />
+                                    
+                        <input type="password" 
+                        value = {this.state.password} 
+                        onChange = {this.update("password")}
+                        placeholder='Your password'
+                        className='session-form-input'  
+                        />
+                       
+                        {this.errorMessages()}
+
+                        <input type="submit" 
+                        value = "Ready to Jiggy"
+                        className='session-butn'  
+                        />
+                    
                 </form>
-                
-                
-                
-                <button onClick={() => this.props.openModal()}>Create Account Instead</button>
+                            
+                {/* <button onClick={() => this.props.openModal()}>Create Account Instead</button> */}
             </div>
         )
     }

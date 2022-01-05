@@ -7,7 +7,8 @@ class Api::UsersController < ApplicationController
             render :show
             # render "api/users/show"
         else
-            render json: @user.errors.full_messages, status: 422
+            render json: ["This is awkward...try again please."], status: 422
+            #render json: @user.errors.full_messages, status: 422
         end
     end
 

@@ -61,38 +61,55 @@ class SignupForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <h2>Create Account</h2>
-                <button onClick = {this.handleDemoUser}>Demo User</button>
-                <form onSubmit = {this.handleSubmit}>
-                    <div onClick={this.props.closeModal} className="close-x">X</div>
-
-                    {this.errorMessages()}
-                    <div className = "signup-form">
+            <div className = "session-form-container">
+                <button onClick = {this.handleDemoUser} className= 'demo-butn'>
+                    Free Guest Pass
+                </button>
+                
+                
+                <form onSubmit = {this.handleSubmit} className = "session-form-signup">
+                    {/* <div onClick={this.props.closeModal} className="close-x">X</div> */}
 
                     
-                        <label> Email:
-                            <br/><input type="text" value = {this.state.email} onChange = {this.update("email")} />
-                        </label>
-                        <br/>
-                        <label> Password:
-                            <br/><input type="password" value = {this.state.password} onChange = {this.update("password")} />
-                        </label>
-                        <br/>
-                        <label> Display Name:
-                            <br/><input type="text" value = {this.state.displayname} onChange = {this.update("displayname")} />
-                        </label>
-                        <br/>
-                        <label> Age:
-                            <br/><input type="number" value = {this.state.age} onChange = {this.updateAge("age")} />
-                        </label>
-                        <br/>
-                        <input type="submit" value = "Create Account" />
+                      
+                        <input type="text" 
+                        value = {this.state.email} 
+                        onChange = {this.update("email")}
+                        placeholder='Your Email'
+                        className='session-form-input' 
+                        />
+                           
+                        <input type="password" 
+                        value = {this.state.password} 
+                        onChange = {this.update("password")}
+                        placeholder='Your Password'
+                        className='session-form-input'  
+                        />
+                                              
+                        <input type="text" 
+                        value = {this.state.displayname} 
+                        onChange = {this.update("displayname")}
+                        placeholder='Your Display Name'
+                        className='session-form-input'  
+                        />
+                                         
+                        <input type="number" 
+                        value = {this.state.age} 
+                        onChange = {this.updateAge("age")}
+                        placeholder='Your Age'
+                        className='session-form-input'  
+                        /> 
 
+                        {this.errorMessages()}
 
-                    </div>
+                        <input type="submit" 
+                        value = "Create Account"
+                        className='session-butn' 
+                        />
+
+                    
                 </form>
-                <button onClick={() => this.props.openModal()}>Sign In Instead</button>
+                {/* <button onClick={() => this.props.openModal()}>Sign In Instead</button> */}
             </div>
         )
     }

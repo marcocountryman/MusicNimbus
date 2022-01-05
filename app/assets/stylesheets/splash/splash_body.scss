@@ -20,6 +20,8 @@
     width: 250px;
     color: white;
     align-items: center;
+    border: none;
+    border-radius: 8px;
 }
 .splash-box-2 {
     background-color: white;
@@ -106,6 +108,8 @@ li > img {
     font-size: 18px;
     color: white;
     width: 125px;
+    border: none;
+    border-radius: 8px;
 }
 .linkedinbutn {
     background-color: #ff004f;
@@ -113,6 +117,8 @@ li > img {
     font-size: 18px;
     color: white;
     width: 125px;
+    border: none;
+    border-radius: 8px;
 }
 .splash-box-4 {
     background-image: image-url('splash-body-background.png');
@@ -186,6 +192,8 @@ li > img {
     color: white;
     width: 200px;
     height: 40px;
+    border: none;
+    border-radius: 8px;
 }
 .create-button-container {
     padding-bottom: 20px;
@@ -208,4 +216,5 @@ li > img {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: white;
     width: 80px;
+    border-radius: 8px;
 }
