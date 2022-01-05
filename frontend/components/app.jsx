@@ -5,13 +5,13 @@ import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import DiscoverContainer from './discover/discover_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import Modal from './modals/modal';
+import ModalContainer from './modals/modal';
 
 const App = () => {
 
     return (
         <div className = "app">
-            
+            <ModalContainer/>
             <Switch>
 
                 {/* <AuthRoute path="/login" component={LoginFormContainer} />

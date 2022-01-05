@@ -6,8 +6,7 @@ import { openModal } from "../../action/modal_actions";
 const mDTP = (dispatch) => {
 
     return {
-        openLogin: () => dispatch(openModal('login')),
-        openSignup: () => dispatch(openModal('signup'))
+        openModal: modal => dispatch(openModal(modal))
     }
 }
 

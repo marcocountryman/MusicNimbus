@@ -4,9 +4,8 @@ import SignupFormContainer from '../session/signup_form_container';
 import { connect } from 'react-redux';
 import { closeModal } from '../../action/modal_actions';
 
-const Modal = (props) => {
+const Modal = ({modal, closeModal}) => {
 
-    const { modal, closeModal } = props;
 
     if (!modal) {
         return null;
@@ -35,7 +34,7 @@ const Modal = (props) => {
 }
 
 const mSTP = state => {
-    
+    debugger
     return {
         modal: state.ui.modal
     };
