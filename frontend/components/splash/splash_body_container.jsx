@@ -1,4 +1,4 @@
-import SplashHeader from "./splash_header";
+import SplashBody from "./splash_body";
 import { connect } from 'react-redux';
 import { openModal } from "../../action/modal_actions";
 
@@ -9,4 +9,4 @@ const mDTP = (dispatch) => {
     }
 }
 
-export default connect(null, mDTP)(SplashHeader);
+export default connect(null, mDTP)(SplashBody);

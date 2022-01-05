@@ -1,10 +1,10 @@
 import React from 'react';
 
-const SplashBody = () => {
+const SplashBody = (props) => {
     return (
         <div className = "splash-body" >
             <div className = "splash-box-1">
-                <button className = "upload-btn">Upload your own</button>
+                <button className = "upload-btn" onClick = {() => props.openModal('login')}>Upload your own</button>
                 <h2 className = "splash-message-1">Hear what's trending for free in the Music Nimbus community</h2>
             </div>
             <div className = "splash-box-2">
@@ -79,8 +79,8 @@ const SplashBody = () => {
                         <div className='right-content-color-effect'></div>
                         <p className='right-content-info'>Music Nimbus is available on Web for best experience.</p>                 
                         <div className='right-content-buttons'>
-                            <button className = "githubbutn">GitHub</button>
-                            <button className='linkedinbutn'>LinkedIn</button>
+                            <button className = "githubbutn"><a href= "https://github.com/marcocountryman" className = "link" target = "_blank">Github</a></button>
+                            <button className='linkedinbutn'><a href= "https://www.linkedin.com/" className = "link" target = "_blank">LinkedIn</a></button>
                         </div>
                     </div>  
                 </div>
@@ -101,10 +101,10 @@ const SplashBody = () => {
             <div className = "splash-box-5">
                 <div className = "create-message-1">Thanks for listening. Now join in.</div>
                 <div className = "create-message-2">Save tracks, follow users, build playlists. All for free.</div>
-                <div className = "create-button-container"><button className = "create-button">Create Account</button></div>
+                <div className = "create-button-container"><button className = "create-button" onClick = {() => props.openModal('signup')}>Create Account</button></div>
                 <div className = "create-message-container">
                     <p className = "create-signin-message">Already have an account?</p>
-                    <button className = "create-signin-butn">Sign In</button>
+                    <button className = "create-signin-butn" onClick = {() => props.openModal('login')}>Sign In</button>
                 </div>
             </div>
         </div>

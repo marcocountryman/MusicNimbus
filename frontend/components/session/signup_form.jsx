@@ -15,6 +15,10 @@ class SignupForm extends React.Component {
         this.handleDemoUser = this.handleDemoUser.bind(this);
     }
 
+    componentWillUnmount() {
+        this.props.removeErrors();
+    }
+
     handleSubmit(e) {
         e.preventDefault;
         const user = Object.assign({}, this.state);
@@ -49,9 +53,10 @@ class SignupForm extends React.Component {
 
     errorMessages() {
         return(
-            <ul>
+            <ul className = "session-errors">
                 {this.props.errors.map((error, i) => (
-                <li key={`error-${i}`}>
+                <li key={`error-${i}`} 
+                    className = "errors-item">
                     {error}
                 </li>
                 ))}
