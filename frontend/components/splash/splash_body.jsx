@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const SplashBody = (props) => {
     return (
@@ -106,6 +107,15 @@ const SplashBody = (props) => {
                     <p className = "create-signin-message">Already have an account?</p>
                     <button className = "create-signin-butn" onClick = {() => props.openModal('login')}>Sign In</button>
                 </div>
+            </div>
+
+            <div className='splash-footer'>
+                <ul className = "footer-items">
+                    <li className = "footer-list-item"><a href= "https://github.com/marcocountryman" className = "link-footer" target = "_blank">Github</a></li>
+                    <li className = "footer-list-item"><a href= "https://www.linkedin.com/" className = "link-footer" target = "_blank">LinkedIn</a></li>
+                    <li className = "footer-list-item"><Link to = "/" className = "link-footer">Sources</Link></li>
+                </ul>
+                <span className = "language">Language: English (UK)</span>
             </div>
         </div>
     )

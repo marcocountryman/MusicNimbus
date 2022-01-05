@@ -222,3 +222,27 @@ li > img {
     text-decoration: none;
     color: white;
 }
+
+.splash-footer {
+    border-top: 2px solid lightgrey;
+    height: 100px;
+    background-color: white;
+}
+.footer-items {
+    display: flex;
+    padding: 10px;
+    padding-bottom: 15px;
+}
+.language {
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.footer-list-item {
+    padding-right: 10px;
+}
+.link-footer {
+    color: lightgrey;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
