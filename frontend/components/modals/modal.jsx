@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { closeModal } from '../../action/modal_actions';
 
 const Modal = ({modal, closeModal}) => {
-
+    debugger
 
     if (!modal) {
         return null;
@@ -13,11 +13,11 @@ const Modal = ({modal, closeModal}) => {
     let component;
     switch(modal) {
         case 'login':
-        component = LoginFormContainer;
+        component = <LoginFormContainer/>;
         break;
 
         case 'signup':
-        component = SignupFormContainer;
+        component = <SignupFormContainer/>;
         break;
 
         default:
@@ -34,7 +34,7 @@ const Modal = ({modal, closeModal}) => {
 }
 
 const mSTP = state => {
-    debugger
+    
     return {
         modal: state.ui.modal
     };
