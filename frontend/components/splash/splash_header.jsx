@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { openModal } from '../../action/modal_actions';
+// import { openModal } from '../../action/modal_actions';
 
 const SplashHeader = (props) => {
 
@@ -11,8 +11,8 @@ const SplashHeader = (props) => {
                 <Link to = "/" className = "header-logo-text">Music Nimbus</Link>
             </div>
             <div className = "header-buttons">
-                <button  className = "login-btn" onClick = {() => openModal('login')}>Sign In</button>
-                <button className = "signup-btn" onClick = {() => openModal('signup')}>Create Account</button>
+                <button  className = "login-btn" onClick = {() => props.openModal('login')}>Sign In</button>
+                <button className = "signup-btn" onClick = {() => props.openModal('signup')}>Create Account</button>
             </div>
         </div>
     )

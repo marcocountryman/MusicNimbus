@@ -16,8 +16,8 @@ const App = () => {
 
                 {/* <AuthRoute path="/login" component={LoginFormContainer} />
                 <AuthRoute path="/signup" component={SignupFormContainer} /> */}
+                <AuthRoute exact path= "/" component={Splash}/>
                 <ProtectedRoute path="/discover" component={DiscoverContainer} />
-                <Route exact path= "/" component={Splash}/>
                 
             </Switch> 
 

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { closeModal } from '../../action/modal_actions';
 
 const Modal = ({modal, closeModal}) => {
-    debugger
+    
 
     if (!modal) {
         return null;
