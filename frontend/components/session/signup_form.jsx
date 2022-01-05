@@ -18,7 +18,7 @@ class SignupForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault;
         const user = Object.assign({}, this.state);
-        this.props.signup(user);
+        this.props.signup(user).then(this.props.closeModal);
     }
 
     handleDemoUser(e) {
@@ -27,7 +27,7 @@ class SignupForm extends React.Component {
             email: "hunter12@hotmail.com",
             password: "password"
         }
-        this.props.login(user);
+        this.props.login(user).then(this.props.closeModal);
     }
 
     update(field) {
@@ -65,26 +65,34 @@ class SignupForm extends React.Component {
                 <h2>Create Account</h2>
                 <button onClick = {this.handleDemoUser}>Demo User</button>
                 <form onSubmit = {this.handleSubmit}>
+                    <div onClick={this.props.closeModal} className="close-x">X</div>
+
                     {this.errorMessages()}
-                    <label> Email:
-                         <br/><input type="text" value = {this.state.email} onChange = {this.update("email")} />
-                    </label>
-                    <br/>
-                    <label> Password:
-                         <br/><input type="password" value = {this.state.password} onChange = {this.update("password")} />
-                    </label>
-                     <br/>
-                    <label> Display Name:
-                         <br/><input type="text" value = {this.state.displayname} onChange = {this.update("displayname")} />
-                    </label>
-                     <br/>
-                    <label> Age:
-                         <br/><input type="number" value = {this.state.age} onChange = {this.updateAge("age")} />
-                    </label>
-                     <br/>
-                    <input type="submit" value = "Create Account" />
+                    <div className = "signup-form">
+
+                    
+                        <label> Email:
+                            <br/><input type="text" value = {this.state.email} onChange = {this.update("email")} />
+                        </label>
+                        <br/>
+                        <label> Password:
+                            <br/><input type="password" value = {this.state.password} onChange = {this.update("password")} />
+                        </label>
+                        <br/>
+                        <label> Display Name:
+                            <br/><input type="text" value = {this.state.displayname} onChange = {this.update("displayname")} />
+                        </label>
+                        <br/>
+                        <label> Age:
+                            <br/><input type="number" value = {this.state.age} onChange = {this.updateAge("age")} />
+                        </label>
+                        <br/>
+                        <input type="submit" value = "Create Account" />
+
+
+                    </div>
                 </form>
-                <Link to='/login'>Sign In Instead</Link>
+                <button onClick={() => this.props.openModal()}>Sign In Instead</button>
             </div>
         )
     }

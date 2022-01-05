@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SplashHeader = () => {
+const SplashHeader = (props) => {
 
     return (
         <div className = "header-content">
@@ -10,8 +10,8 @@ const SplashHeader = () => {
                 <Link to = "/" className = "header-logo-text">Music Nimbus</Link>
             </div>
             <div className = "header-buttons">
-                <Link to = "/login" ><button  className = "login-btn">Sign In</button></Link>
-                <Link to = "/signup" ><button className = "signup-btn">Create Account</button></Link>
+                <button  className = "login-btn" onClick = {() => props.openLogin}>Sign In</button>
+                <button className = "signup-btn" onClick = {() => props.openSignup}>Create Account</button>
             </div>
         </div>
     )

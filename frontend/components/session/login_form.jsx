@@ -16,7 +16,7 @@ class LoginForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault;
         const user = Object.assign({}, this.state);
-        this.props.login(user);
+        this.props.login(user).then(this.props.closeModal);
     }
 
     handleDemoUser(e) {
@@ -25,7 +25,7 @@ class LoginForm extends React.Component {
             email: "hunter12@hotmail.com",
             password: "password"
         };
-        this.props.login(user);
+        this.props.login(user).then(this.props.closeModal);
     }
 
     update(field) {
@@ -52,19 +52,28 @@ class LoginForm extends React.Component {
             <div>
                 <button onClick = {this.handleDemoUser}>Demo User</button>
                 <h2>Sign In</h2>
+                
+                
                 <form onSubmit = {this.handleSubmit}>
+                    <div onClick={this.props.closeModal} className="close-x">X</div>
+
                     {this.errorMessages()}
-                    <label> Email:
-                        <br/><input type="text" value = {this.state.email} onChange = {this.update("email")} />
-                    </label>
-                    <br/>
-                    <label> Password:
-                        <br/><input type="password" value = {this.state.password} onChange = {this.update("password")} />
-                    </label>
-                     <br/>
-                    <input type="submit" value = "Sign In" />
+                    <div className = "signup-form"> 
+                        <label> Email:
+                            <br/><input type="text" value = {this.state.email} onChange = {this.update("email")} />
+                        </label>
+                        <br/>
+                        <label> Password:
+                            <br/><input type="password" value = {this.state.password} onChange = {this.update("password")} />
+                        </label>
+                        <br/>
+                        <input type="submit" value = "Sign In" />
+                    </div>   
                 </form>
-                <Link to ="signup">Create Account</Link>
+                
+                
+                
+                <button onClick={() => this.props.openModal()}>Create Account Instead</button>
             </div>
         )
     }
