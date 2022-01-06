@@ -8,6 +8,7 @@ class User < ApplicationRecord
     validates :email, :displayname, :age, :session_token, :password_digest, presence:true
     validates :email, uniqueness:true
     validates :password, length: {minimum: 8}, allow_nil:true
+    validates :displayname, length: {maximum:16}
 
     attr_reader :password
     after_initialize :ensure_session_token

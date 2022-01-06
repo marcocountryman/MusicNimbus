@@ -114,6 +114,12 @@ const SplashBody = (props) => {
                     <li className = "footer-list-item"><a href= "https://github.com/marcocountryman" className = "link-footer" target = "_blank">Github</a></li>
                     <li className = "footer-list-item"><a href= "https://www.linkedin.com/" className = "link-footer" target = "_blank">LinkedIn</a></li>
                     <li className = "footer-list-item"><Link to = "/" className = "link-footer">Sources</Link></li>
+                    <li className = "footer-list-item">React</li>
+                    <li className = "footer-list-item">Redux</li>
+                    <li className = "footer-list-item">Rails</li>
+                    <li className = "footer-list-item">Ruby</li>
+                    <li className = "footer-list-item">JavaScript</li>
+                    <li className = "footer-list-item">AWS</li>
                 </ul>
                 <span className = "language">Language: English (UK)</span>
             </div>

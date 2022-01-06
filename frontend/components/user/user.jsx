@@ -1,17 +1,19 @@
 import React from 'react';
 import NavBarContainer from '../navbar/nav_bar_container';
-// NOTE:
-// NOT THE FINISHED PRODUCT, USERS WILL BE REDIRECTED HERE UPON LOG IN.
 
-class Discover extends React.Component {
+class UserShow extends React.Component {
+
+    constructor(props) {
+        super(props)
+    }
 
     render() {
-        return(
+
+        return (
             <div>
                 <NavBarContainer/>
-                
             </div>
         )
     }
 }
-export default Discover;
+export default UserShow;
