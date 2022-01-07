@@ -1,9 +1,4 @@
 class User < ApplicationRecord
-    # NOTE: eventually more associations will be made in this section
-    # this is a note to self this section will be revisited.
-
-    # ANOTHER NOTE: I will add more errors here
-    # i.e. special characters in password and checking for @ symbol in email
     
     validates :email, :displayname, :age, :session_token, :password_digest, presence:true
     validates :email, uniqueness:true
@@ -12,6 +7,8 @@ class User < ApplicationRecord
 
     attr_reader :password
     after_initialize :ensure_session_token
+
+    has_one_attached :photo
 
     has_many :songs,
     primary_key: :id,
