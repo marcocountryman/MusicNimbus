@@ -1,6 +1,7 @@
 import { RECEIVE_CURRENT_USER } from "../action/session_actions";
 
 const usersReducer = (state = {}, action) => {
+    
     Object.freeze(state);
     const nextState = Object.assign({},state);
 

@@ -4,7 +4,15 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 //IMPORTS FOR TESTING. REMOVE PRIOR TO PUSH TO PRODUCTION.
-import { signup, login, logout} from './action/session_actions';
+import { signup, 
+    login, 
+    logout} from './action/session_actions';
+
+import { fetchAllSongs, 
+    fetchSong, 
+    createSong, 
+    updateSong, 
+    deleteSong} from './action/song_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -30,6 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.logout = logout;
     window.signup = signup;
 
+    window.fetchAllSongs = fetchAllSongs;
+    window.fetchSong = fetchSong;
+    window.createSong = createSong;
+    window.updateSong = updateSong;
+    window.deleteSong = deleteSong;
 
 
 
