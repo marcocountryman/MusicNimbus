@@ -1,18 +1,15 @@
 import React from 'react';
 import NavBarContainer from '../navbar/nav_bar_container';
 import DiscoverBodyContainer from './discover_body_container';
-// NOTE:
-// NOT THE FINISHED PRODUCT, USERS WILL BE REDIRECTED HERE UPON LOG IN.
 
-class Discover extends React.Component {
+const Discover = () => {
 
-    render() {
-        return(
-            <div>
+    return (
+         <div className = "discover-container">
                 <NavBarContainer/>
                 <DiscoverBodyContainer/>
-            </div>
-        )
-    }
+        </div>
+    )
 }
+
 export default Discover;

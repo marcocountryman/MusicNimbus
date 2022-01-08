@@ -28,7 +28,7 @@ class LoginForm extends React.Component {
         e.preventDefault();
         const user = {
             email: "hunter12@hotmail.com",
-            password: "password"
+            password: "hunter12"
         };
         
         this.props.login(user).then(this.props.closeModal);
