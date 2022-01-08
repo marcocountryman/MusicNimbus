@@ -29,10 +29,11 @@
     width: 25%;
 }
 
-.genre-content {
+.genre-content, ::-webkit-scrollbar-button {
     // border: 3px solid pink;
     display: flex;
-    overflow: hidden;
+    overflow-x: scroll;
+    border-bottom: 1px solid #999999;
 }
 
 .genre-container {
@@ -48,6 +49,7 @@
 .song-container {
     display: flex;
     flex-direction: column;
+    padding-bottom: 10px;
 }
 
 .genre-label {
