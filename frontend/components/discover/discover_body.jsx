@@ -15,7 +15,9 @@ class DiscoverBody extends React.Component {
         const renderTrap = trapItems.map(song => {
             return (
                 <li>
-                    {song.title}
+                    <img src={song.imageUrl} alt="" />
+                    <span>{song.title}</span>
+                    <span>{song.artist}</span>
                 </li>
             )
         })
@@ -24,7 +26,9 @@ class DiscoverBody extends React.Component {
         const renderHipHop = hipHopItems.map(song => {
             return (
                 <li>
-                    {song.title}
+                    <img src={song.imageUrl} alt="" />
+                    <span>{song.title}</span>
+                    <span>{song.artist}</span>
                 </li>
             )
         })
@@ -33,7 +37,9 @@ class DiscoverBody extends React.Component {
         const renderStudy = studyItems.map(song => {
             return (
                 <li>
-                    {song.title}
+                    <img src={song.imageUrl} alt="" />
+                    <span>{song.title}</span>
+                    <span>{song.artist}</span>
                 </li>
             )
         })
@@ -42,7 +48,9 @@ class DiscoverBody extends React.Component {
         const renderJazz = jazzItems.map(song => {
             return (
                 <li>
-                    {song.title}
+                    <img src={song.imageUrl} alt="" />
+                    <span>{song.title}</span>
+                    <span>{song.artist}</span>
                 </li>
             )
         })
@@ -51,7 +59,9 @@ class DiscoverBody extends React.Component {
         const renderClassical = classicalItems.map(song => {
             return (
                 <li>
-                    {song.title}
+                    <img src={song.imageUrl} alt="" />
+                    <span>{song.title}</span>
+                    <span>{song.artist}</span>
                 </li>
             )
         })
@@ -81,8 +91,7 @@ class DiscoverBody extends React.Component {
                     Sidebar
                 </div>
             </div>
-        </div>
-        
+        </div>    
         )
     }
 }
