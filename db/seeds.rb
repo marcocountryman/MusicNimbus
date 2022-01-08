@@ -47,32 +47,110 @@ require 'open-uri'
 
 Song.delete_all
 User.delete_all
+ActiveRecord::Base.connection.reset_pk_sequence!('users')
+ActiveRecord::Base.connection.reset_pk_sequence!('songs')
 
-user1 = User.create!(
-    email: "hunter12@hotmail.com",
-    password: "password",
-    age: 28,
-    displayname: "Esteemed Guest"
-)
+user1 = User.create!(email: "hunter12@hotmail.com", password: "hunter12", age: 28, displayname: "Esteemed Guest")
+user2 = User.create!(email: "therealjoebiden@hotmail.com", password: "hunter12", age: 32, displayname: "Joe Biden")
+user3 = User.create!(email: "mrcelebrity.com", password: "hunter12", age: 19, displayname: "George Bush")
+user4 = User.create!(email: "justinbieberfan@hotmail.com", password: "hunter12", age: 22, displayname: "Bill Clinton")
+user5 = User.create!(email: "islandlover@hotmail.com", password: "hunter12", age: 33, displayname: "Al Gore")
+user6 = User.create!(email: "mrworldwide@hotmail.com", password: "hunter12", age: 21, displayname: "Sara Palin")
+user7 = User.create!(email: "mrsworldwide@hotmail.com", password: "hunter12", age: 23, displayname: "John Kerry")
+user8 = User.create!(email: "sayitaintso@hotmail.com", password: "hunter12", age: 24, displayname: "Ted Cruz")
+user9 = User.create!(email: "helloworld@hotmail.com", password: "hunter12", age: 26, displayname: "Marco Rubio")
+user10 = User.create!(email: "superprops@hotmail.com", password: "hunter12", age: 27, displayname: "Mitt Romney")
 
+#TITLE, ARTIST, GENRE, UPLOADER-ID
+#['Trap', 'Study', 'Jazz', 'Classical', 'Hip Hop'] 
 
+song1 = Song.create!(title: "After Midnight", artist: "Julius H", genre: 'Jazz', uploader_id: user1.id)
+image1 = open('https://music-nimbus-seeds.s3.amazonaws.com/jazz-art.jpg')
+song1.image_file.attach(io: image1, filename: 'jazz-art.jpg')
+sound1 = open('https://music-nimbus-seeds.s3.amazonaws.com/after-midnight-juliush.mp3')
+song1.audio_file.attach(io: sound1, filename: 'after-midnight-julius.mp3')
 
+song2 = Song.create!(title: "D 960 III", artist: "Bach", genre: 'Classical', uploader_id: user1.id)
+image2 = open('https://music-nimbus-seeds.s3.amazonaws.com/music-sheet.jpg')
+song2.image_file.attach(io: image2, filename: 'music-sheet.jpg')
+sound2 = open('https://music-nimbus-seeds.s3.amazonaws.com/d-960-iii-bach.mp3')
+song2.audio_file.attach(io: sound2, filename: 'd-960-iii-bach.mp3')
 
-# song1 = Song.create!(
-#     title: 'Still the One',
-#     uploader_id: 5,
-#     genre: 'Hype',
-#     artist: 'Shania Twain'
-# )
+song3 = Song.create!(title: "Back to Old School", artist: "Star8sound", genre: 'Hip Hop', uploader_id: user1.id)
+image3 = open('https://music-nimbus-seeds.s3.amazonaws.com/dance-hiphop.jpg')
+song3.image_file.attach(io: image3, filename: 'dance-hiphop.jpg')
+sound3 = open('https://music-nimbus-seeds.s3.amazonaws.com/back-to-oldschool-stare8sound.mp3')
+song3.audio_file.attach(io: sound3, filename: 'back-to-oldschool-stare8sound.mp3')
 
-# song2 = Song.create!(
-#     title: 'La Isla Bonita',
-#     uploader_id: 2,
-#     genre: 'Hype',
-#     artist: 'Madonna'
-# )
+song4 = Song.create!(title: "Herbal Tea", artist: "Artificial Music", genre: 'Study', uploader_id: user1.id)
+image4 = open('https://music-nimbus-seeds.s3.amazonaws.com/book.jpg')
+song4.image_file.attach(io: image4, filename: 'dance-hiphop.jpg')
+sound4 = open('https://music-nimbus-seeds.s3.amazonaws.com/herbal-tea.mp3')
+song4.audio_file.attach(io: sound4, filename: 'herbal-tea.mp3')
 
+song5 = Song.create!(title: "Aggressive Trap", artist: "Ivy Music", genre: 'Trap', uploader_id: user1.id)
+image5 = open('https://music-nimbus-seeds.s3.amazonaws.com/graffiti.jpg')
+song5.image_file.attach(io: image5, filename: 'graffiti.jpg')
+sound5 = open('https://music-nimbus-seeds.s3.amazonaws.com/aggressive-trap-ivy-music.mp3')
+song5.audio_file.attach(io: sound5, filename: 'aggressive-trap-ivy-music.mp3')
 
-# THIS JUST IS NOT WORKING AT ALL
-file = URI.open('https://music-nimbus-seeds.s3.amazonaws.com/tokyo.png');
-user1.photo.attach(io: file, filename: 'tokyo.png');
+song6 = Song.create!(title: "Goldberg Variations", artist: "Bach", genre: 'Classical', uploader_id: user2.id)
+image6 = open('https://music-nimbus-seeds.s3.amazonaws.com/orchestra.jpg')
+song6.image_file.attach(io: image6, filename: 'orchestra.jpg')
+sound6 = open('https://music-nimbus-seeds.s3.amazonaws.com/goldberg-variations(Bach).mp3')
+song6.audio_file.attach(io: sound6, filename: 'goldberg-variations(Bach).mp3')
+
+song7 = Song.create!(title: "Energetic Hip Hop", artist: "Skilsel", genre: 'Hip Hop', uploader_id: user2.id)
+image7 = open('https://music-nimbus-seeds.s3.amazonaws.com/mixtape.jpg')
+song7.image_file.attach(io: image7, filename: 'mixtape.jpg')
+sound7 = open('https://music-nimbus-seeds.s3.amazonaws.com/energetic-hiphop-skilsel.mp3')
+song7.audio_file.attach(io: sound7, filename: 'energetic-hiphop-skilsel.mp3')
+
+song8 = Song.create!(title: "Alluringly Beautiful", artist: "Nesrality", genre: 'Jazz', uploader_id: user2.id)
+image8 = open('https://music-nimbus-seeds.s3.amazonaws.com/jazz-singer.jpg')
+song8.image_file.attach(io: image8, filename: 'jazz-singer.jpg')
+sound8 = open('https://music-nimbus-seeds.s3.amazonaws.com/alluringly-beautiful-nesrality.mp3')
+song8.audio_file.attach(io: sound8, filename: 'alluringly-beautiful-nesrality.mp3')
+
+song9 = Song.create!(title: "Journey End", artist: "Purrple Cat", genre: 'Study', uploader_id: user3.id)
+image9 = open('https://music-nimbus-seeds.s3.amazonaws.com/coffee.jpg')
+song9.image_file.attach(io: image9, filename: 'coffee.jpg')
+sound9 = open('https://music-nimbus-seeds.s3.amazonaws.com/journey-end.mp3')
+song9.audio_file.attach(io: sound9, filename: 'journey-end.mp3')
+
+song10 = Song.create!(title: "Def", artist: "KingBeatz", genre: 'Trap', uploader_id: user3.id)
+image10 = open('https://music-nimbus-seeds.s3.amazonaws.com/wall-art.jpg')
+song10.image_file.attach(io: image10, filename: 'wall-art.jpg')
+sound10 = open('https://music-nimbus-seeds.s3.amazonaws.com/def-kingbeatz.mp3')
+song10.audio_file.attach(io: sound10, filename: 'def-kingbeatz.mp3')
+
+song11 = Song.create!(title: "Sonata KV 331", artist: "Mozart", genre: 'Classical', uploader_id: user3.id)
+image11 = open('https://music-nimbus-seeds.s3.amazonaws.com/mozart-bear.jpg')
+song11.image_file.attach(io: image11, filename: 'mozart-bear.jpg')
+sound11 = open('https://music-nimbus-seeds.s3.amazonaws.com/sonata-kv-331-mozart.mp3')
+song11.audio_file.attach(io: sound11, filename: 'sonata-kv-331-mozart.mp3')
+
+song12 = Song.create!(title: "Mo Baby", artist: "ETRNLPRODUCER", genre: 'Hip Hop', uploader_id: user3.id)
+image12 = open('https://music-nimbus-seeds.s3.amazonaws.com/hiphop-artist.jpg')
+song12.image_file.attach(io: image12, filename: 'hiphop-artist.jpg')
+sound12 = open('https://music-nimbus-seeds.s3.amazonaws.com/mo-baby-etrnlproducer.mp3')
+song12.audio_file.attach(io: sound12, filename: 'mo-baby-etrnlproducer.mp3')
+
+song13 = Song.create!(title: "Bop Things", artist: "Nesrality", genre: 'Jazz', uploader_id: user4.id)
+image13 = open('https://music-nimbus-seeds.s3.amazonaws.com/jazz-artist.jpg')
+song13.image_file.attach(io: image13, filename: 'jazz-artist.jpg')
+sound13 = open('https://music-nimbus-seeds.s3.amazonaws.com/bop-things-nesrality.mp3')
+song13.audio_file.attach(io: sound13, filename: 'bop-things-nesrality.mp3')
+
+song14 = Song.create!(title: "Floating Castle", artist: "Purrple Cat", genre: 'Study', uploader_id: user4.id)
+image14 = open('https://music-nimbus-seeds.s3.amazonaws.com/meditation.jpg')
+song14.image_file.attach(io: image14, filename: 'meditation.jpg')
+sound14 = open('https://music-nimbus-seeds.s3.amazonaws.com/purrple-cat-floating-castle.mp3')
+song14.audio_file.attach(io: sound14, filename: 'purrple-cat-floating-castle.mp3')
+
+song15 = Song.create!(title: "Floating Castle", artist: "Purrple Cat", genre: 'Study', uploader_id: user4.id)
+image15 = open('https://music-nimbus-seeds.s3.amazonaws.com/meditation.jpg')
+song15.image_file.attach(io: image15, filename: 'meditation.jpg')
+sound15 = open('https://music-nimbus-seeds.s3.amazonaws.com/purrple-cat-floating-castle.mp3')
+song15.audio_file.attach(io: sound15, filename: 'purrple-cat-floating-castle.mp3')
+
