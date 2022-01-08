@@ -15,35 +15,29 @@
     width: 1250px;
     background-color: white;
     padding-top: 30px;
-    // border: 3px solid red;
 }
 
 .discover-songs {
-    // border: 3px solid blue;
     width: 75%;
     border-right: 1px solid #999999;
     padding-right: 10px;
 }
 
 .discover-sidebar {
-    // border: 3px solid green;
     font-size: 30px;
     width: 25%;
-    // position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .genre-content {
-    // border: 3px solid pink;
     display: flex;
     overflow-x: scroll;
     border-bottom: 1px solid #999999;
 }
 
 .genre-container {
-    // border: 3px solid purple;
     padding-bottom: 10px;
     padding-left: 15px;
 }
@@ -84,10 +78,7 @@
 }
 
 .discover-sidebar-container {
-    // border: 3px solid gold;
-    // align-items: center;
     position: fixed;
-    // top: auto;
     width: 250px;
     height: 400px;
 }
@@ -97,7 +88,6 @@
 }
 
 .sidebar-song {
-    // border: 3px solid pink;
     border-top: 1px solid #999999;
     border-bottom: 1px solid #999999;
     display: flex;
@@ -156,4 +146,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
     font-weight: 100;
+}
+.genre-link {
+    text-decoration: none;
 }

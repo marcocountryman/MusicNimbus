@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class DiscoverBody extends React.Component {
     
@@ -16,7 +17,9 @@ class DiscoverBody extends React.Component {
             return (
                 <li className = "song-container">
                     <img src={song.imageUrl} alt="trapsong" className= "discover-images"/>
-                    <span className = "song-title">{song.title}</span>
+                    <Link to = {`/songs/${song.id}`} className = "genre-link">
+                        <span className = "song-title">{song.title}</span>
+                    </Link>
                     <span className = "artist-name">{song.artist}</span>
                 </li>
             )
@@ -27,7 +30,9 @@ class DiscoverBody extends React.Component {
             return (
                 <li className = "song-container">
                     <img src={song.imageUrl} alt="hiphopsong" className= "discover-images"/>
-                    <span className = "song-title">{song.title}</span>
+                    <Link to = {`/songs/${song.id}`} className = "genre-link">
+                        <span className = "song-title">{song.title}</span>
+                    </Link>
                     <span className = "artist-name">{song.artist}</span>
                 </li>
             )
@@ -38,7 +43,9 @@ class DiscoverBody extends React.Component {
             return (
                 <li className = "song-container">
                     <img src={song.imageUrl} alt="studysong" className= "discover-images"/>
-                    <span className = "song-title">{song.title}</span>
+                    <Link to = {`/songs/${song.id}`} className = "genre-link">
+                        <span className = "song-title">{song.title}</span>
+                    </Link>
                     <span className = "artist-name">{song.artist}</span>
                 </li>
             )
@@ -49,7 +56,9 @@ class DiscoverBody extends React.Component {
             return (
                 <li className = "song-container">
                     <img src={song.imageUrl} alt="jazzsong" className= "discover-images"/>
-                    <span className = "song-title">{song.title}</span>
+                    <Link to = {`/songs/${song.id}`} className = "genre-link">
+                        <span className = "song-title">{song.title}</span>
+                    </Link>
                     <span className = "artist-name">{song.artist}</span>
                 </li>
             )
@@ -60,7 +69,9 @@ class DiscoverBody extends React.Component {
             return (
                 <li className = "song-container">
                     <img src={song.imageUrl} alt="classicalsong" className= "discover-images"/>
-                    <span className = "song-title">{song.title}</span>
+                    <Link to = {`/songs/${song.id}`} className = "genre-link">
+                        <span className = "song-title">{song.title}</span>
+                    </Link>
                     <span className = "artist-name">{song.artist}</span>
                 </li>
             )
