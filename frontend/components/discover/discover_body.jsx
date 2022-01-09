@@ -95,7 +95,7 @@ class DiscoverBody extends React.Component {
                     <div className = 'genre-container'>
                         <div className = "genre-label">
                             <h2 className = "genre-header">Trap</h2>
-                            <p className = "genre-desc">Get down And dirty</p>
+                            <p className = "genre-desc">Get down and dirty</p>
                         </div>
                         <ul className = "genre-content">
                             {renderTrap}
