@@ -5,6 +5,32 @@
 
 .upload-form-container {
     width: 1247px;
-    border: 5px solid black;
+    border: 5px solid gold;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 500px;
+}
+
+.upload-top {
+    border: 2px solid red;
     background-color: white;
+    width: 75%;
+    height: 15%;
+}
+
+.upload-form {
+    border: 2px solid blue;
+    background-color: white;
+    height: 50%;
+    width: 75%;
+}
+
+.upload-bottom {
+    border: 2px solid green;
+    background-color: lightgray;
+    width: 75%;
+    height: 15%;
 }

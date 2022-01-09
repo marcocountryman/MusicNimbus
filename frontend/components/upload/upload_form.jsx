@@ -18,16 +18,16 @@ class UploadForm extends React.Component {
                 <NavBarContainer/>
                 <div className = 'upload-container'>
                     <div className = 'upload-form-container'>
-                        <div>
-
+                        <div className = "upload-top">
+                            TOP
                         </div>
                         
-                        <div>
-
+                        <div className = "upload-form">
+                            FORM
                         </div>
                         
-                        <div>
-
+                        <div className = "upload-bottom">
+                            BOTTOM
                         </div>
                     </div>
                 </div>
