@@ -143,10 +143,12 @@ class DiscoverBody extends React.Component {
                         
                         <div className = "sidebar-song">
                             
-                            <img src= "https://music-nimbus-seeds.s3.amazonaws.com/hiphop-artist.jpg" 
-                            alt="number-one" 
-                            className = "numberone-artist"
-                            />
+                            <Link to = '/songs/12'>
+                                <img src= "https://music-nimbus-seeds.s3.amazonaws.com/hiphop-artist.jpg" 
+                                alt="number-one" 
+                                className = "numberone-artist"
+                                />
+                            </Link>
                             
                             <div>
                                 <p className = "song-title">MO BABY</p>

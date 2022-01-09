@@ -7,7 +7,8 @@ const mSTP = (state, ownProps) => {
     // debugger
 
     return {
-        song: state.entities.songs[ownProps.match.params.id]
+        song: state.entities.songs[ownProps.match.params.id],
+        songs: Object.values(state.entities.songs)
     }
 }
 
@@ -15,6 +16,7 @@ const mDTP = (dispatch) => {
 
     return {
         fetchSong: songId => dispatch(fetchSong(songId)),
+        fetchAllSongs: () => dispatch(fetchAllSongs())
     }
 }
 

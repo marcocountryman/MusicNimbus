@@ -1,5 +1,6 @@
 import React from 'React'
 import NavBarContainer from '../navbar/nav_bar_container';
+import { Link } from 'react-router-dom';
 
 class SongShow extends React.Component {
 
@@ -9,12 +10,30 @@ class SongShow extends React.Component {
 
     componentDidMount() {
        this.props.fetchSong(this.props.match.params.id);
-    //    debugger
+       this.props.fetchAllSongs();
     }
 
     render() {
 
         if (!this.props.song) return null;
+
+        const relatedGenre = this.props.songs.filter(song => song.genre === this.props.song.genre && song.id !== this.props.song.id);
+        const genreItems = relatedGenre.slice(0,3);
+        const renderGenreItems = genreItems.map( (song, idx) => {
+           return ( 
+                <li className = 'related-genre-item' key = {`song-${idx}`}>
+                    
+                    <Link to = {`/songs/${song.id}`}>
+                        <img src= {song.imageUrl} alt= "song-image" className = 'related-image'/>
+                    </Link>
+
+                    <div className = 'genre-song-info'>
+                        <p className = 'related-title'>{song.title}</p>
+                        <p className = 'related-artist'>{song.artist}</p>
+                    </div>
+                </li>
+            )
+        })
         return (
             <div>
                 <NavBarContainer/>
@@ -50,7 +69,33 @@ class SongShow extends React.Component {
                                     </div>
 
                                     <div className = 'show-page-right'>
-                                            RIGHT
+                                            
+                                            <div className = "show-label">
+                                                <p className = "related-label">Related Songs</p>
+                                            </div>
+                                            <ul className = 'related-genre-list'>
+                                                {renderGenreItems}
+                                            </ul>
+
+                                            <div className = "sidebar-links">
+                                                <button className = "outside-link"><a href="https://github.com/marcocountryman" className = "link">GitHub</a></button>
+                                                    <button className = "outside-link"><a href="https://www.linkedin.com/" className = "link">LinkedIn</a></button>
+                                            </div>
+
+                                            <div className = "tech-used">
+                                                <ul className = "tech-used-list">
+                                                    <li className = "tech-used-item">React</li>
+                                                    <li className = "tech-used-item">Redux</li>
+                                                    <li className = "tech-used-item">JavaScript</li>
+                                                    <li className = "tech-used-item">Ruby</li>
+                                                    <li className = "tech-used-item">Rails</li>
+                                                    <li className = "tech-used-item">AWS</li>
+                                                    <li className = "tech-used-item">CSS</li>
+                                                    <li className = "tech-used-item">HTML</li>
+                                                </ul>
+                                                <p className = "sidebar-language">Language: English(UK)</p>
+                                            </div>
+                                           
                                     </div>
 
                                 </div>

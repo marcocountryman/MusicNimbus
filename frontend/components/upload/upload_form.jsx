@@ -7,11 +7,30 @@ class UploadForm extends React.Component {
         super(props)
     }
 
+     componentWillUnmount() {
+        this.props.removeSongErrors();
+    }
+
     render() {
 
         return (
             <div>
                 <NavBarContainer/>
+                <div className = 'upload-container'>
+                    <div className = 'upload-form-container'>
+                        <div>
+
+                        </div>
+                        
+                        <div>
+
+                        </div>
+                        
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
