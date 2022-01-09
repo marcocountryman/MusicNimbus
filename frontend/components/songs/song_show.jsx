@@ -1,6 +1,7 @@
 import React from 'React'
 import NavBarContainer from '../navbar/nav_bar_container';
 import { Link } from 'react-router-dom';
+import { shuffle } from '../../util/misc_util'
 
 class SongShow extends React.Component {
 
@@ -18,6 +19,7 @@ class SongShow extends React.Component {
         if (!this.props.song) return null;
 
         const relatedGenre = this.props.songs.filter(song => song.genre === this.props.song.genre && song.id !== this.props.song.id);
+        shuffle(relatedGenre)
         const genreItems = relatedGenre.slice(0,3);
         const renderGenreItems = genreItems.map( (song, idx) => {
            return ( 
@@ -101,7 +103,6 @@ class SongShow extends React.Component {
                                 </div>
                         </div>
                 </div>
-                {/* <img src={this.props.song.imageUrl} alt="song-image" /> */}
             </div>
         )
     }
