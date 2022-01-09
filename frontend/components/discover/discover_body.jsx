@@ -13,9 +13,9 @@ class DiscoverBody extends React.Component {
 
     render() {    
         const trapItems = this.props.songs.filter(song => song.genre === "Trap");
-        const renderTrap = trapItems.map(song => {
+        const renderTrap = trapItems.map((song, idx)=> {
             return (
-                <li className = "song-container">
+                <li className = "song-container" key = {`song-${idx}`}>
                     <img src={song.imageUrl} alt="trapsong" className= "discover-images"/>
                     <Link to = {`/songs/${song.id}`} className = "genre-link">
                         <span className = "song-title">{song.title}</span>
@@ -26,9 +26,9 @@ class DiscoverBody extends React.Component {
         })
 
         const hipHopItems = this.props.songs.filter(song => song.genre === "Hip Hop");
-        const renderHipHop = hipHopItems.map(song => {
+        const renderHipHop = hipHopItems.map((song,idx) => {
             return (
-                <li className = "song-container">
+                <li className = "song-container" key = {`song-${idx}`}>
                     <img src={song.imageUrl} alt="hiphopsong" className= "discover-images"/>
                     <Link to = {`/songs/${song.id}`} className = "genre-link">
                         <span className = "song-title">{song.title}</span>
@@ -39,9 +39,9 @@ class DiscoverBody extends React.Component {
         })
 
         const studyItems = this.props.songs.filter(song => song.genre === "Study");
-        const renderStudy = studyItems.map(song => {
+        const renderStudy = studyItems.map((song,idx) => {
             return (
-                <li className = "song-container">
+                <li className = "song-container" key = {`song-${idx}`}>
                     <img src={song.imageUrl} alt="studysong" className= "discover-images"/>
                     <Link to = {`/songs/${song.id}`} className = "genre-link">
                         <span className = "song-title">{song.title}</span>
@@ -52,9 +52,9 @@ class DiscoverBody extends React.Component {
         })
 
         const jazzItems = this.props.songs.filter(song => song.genre === "Jazz");
-        const renderJazz = jazzItems.map(song => {
+        const renderJazz = jazzItems.map((song, idx)=> {
             return (
-                <li className = "song-container">
+                <li className = "song-container" key = {`song-${idx}`}>
                     <img src={song.imageUrl} alt="jazzsong" className= "discover-images"/>
                     <Link to = {`/songs/${song.id}`} className = "genre-link">
                         <span className = "song-title">{song.title}</span>
@@ -65,9 +65,9 @@ class DiscoverBody extends React.Component {
         })
 
         const classicalItems = this.props.songs.filter(song => song.genre === "Classical");
-        const renderClassical = classicalItems.map(song => {
+        const renderClassical = classicalItems.map((song, idx) => {
             return (
-                <li className = "song-container">
+                <li className = "song-container" key = {`song-${idx}`}>
                     <img src={song.imageUrl} alt="classicalsong" className= "discover-images"/>
                     <Link to = {`/songs/${song.id}`} className = "genre-link">
                         <span className = "song-title">{song.title}</span>
