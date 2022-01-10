@@ -13,11 +13,9 @@ class Api::SongsController < ApplicationController
     def create
         @song = Song.new(song_params)
 
-        debugger
-
         if @song.save
             render :show
-            # render json {message: "Upload Successful!"}
+            
         else
             render json: @song.errors.full_messages, status: 422
         end

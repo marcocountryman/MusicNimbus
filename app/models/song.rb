@@ -15,13 +15,13 @@ class Song < ApplicationRecord
 
     def ensure_image
         unless self.image_file.attached?
-            errors[:image_file] << "Must have image file"
+            errors[:image_file] << "must have image file"
         end
     end
 
     def ensure_audio
         unless self.audio_file.attached?
-            errors[:audio_file] << "Must have audio file"
+            errors[:audio_file] << "must have audio file"
         end
     end
 end

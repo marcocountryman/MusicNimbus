@@ -10,12 +10,15 @@ class UploadForm extends React.Component {
             artist: "",
             genre: "",
             imageFile: null,
-            audioFile: null
+            audioFile: null,
+            uploadStatus: false,
+            preview: null
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleImage = this.handleImage.bind(this);
         this.handleAudio = this.handleAudio.bind(this);
         this.handleGenre = this.handleGenre.bind(this);
+        this.handleUpload = this.handleUpload.bind(this);
     }
 
     componentWillUnmount() {
@@ -35,12 +38,24 @@ class UploadForm extends React.Component {
         if (this.state.audioFile) {
             formData.append('song[audio_file]', this.state.audioFile);
         }
-        this.props.createSong(formData)
+        this.props.createSong(formData).then(this.handleUpload).then(this.props.history.push('./discover'))
+
+    }
+
+    handleUpload () {
+    
+        this.setState({ uploadStatus: true })
     }
 
     handleImage(e) {
-
-        this.setState({ imageFile: e.currentTarget.files[0] });
+        const file = e.currentTarget.files[0];
+        const fileReader = new FileReader();
+        fileReader.onloadend = () => {  
+            this.setState({ imageFile: file, preview: fileReader.result});
+        };
+        if (file) {
+            fileReader.readAsDataURL(file);
+        }
     }
 
     handleAudio(e) {
@@ -73,6 +88,10 @@ class UploadForm extends React.Component {
     }
 
     render() {
+        console.log(this.state)
+
+        const prev = this.state.preview ? <img src = {this.state.preview} className = "preview-image"/> 
+        : <img src = 'https://music-nimbus-seeds.s3.amazonaws.com/preview.jpg' className = "preview-image"/>;
 
         return (
             <div>
@@ -84,8 +103,8 @@ class UploadForm extends React.Component {
                         </div>
                         
                         <div className = "upload-form">
-                            
-                            <form onSubmit = {this.handleSubmit}>
+                            {prev}
+                            <form onSubmit = {this.handleSubmit} className = 'upload-inputs'>
                                     
                                     <input type="text" 
                                     value = {this.state.title} 
@@ -109,23 +128,23 @@ class UploadForm extends React.Component {
                                         <option value="Trap">Trap</option> 
                                         <option value="Study">Study</option> 
                                         <option value="Classical">Classical</option> 
-                                        <option value="Hype">Hype</option> 
+                                        <option value="Jazz">Jazz</option> 
                                     
                                     </select>
                                     
-                                    <label> Song
+                                        <h3>Select Audio</h3>
                                         <input type="file"
                                         onChange = {this.handleAudio}
                                         placeholder='Select Audio'
                                         />
-                                    </label>
+                                  
 
-                                    <label> Photo
+                                        <h3>Select Image</h3>
                                          <input type="file"
                                         onChange = {this.handleImage}
                                         placeholder='Select Image'
                                         />
-                                    </label>
+                                   
 
                                     <input type="submit" value = "Upload" />
 
