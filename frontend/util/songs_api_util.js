@@ -18,8 +18,8 @@ export const createSong = (song) => {
         method: 'POST',
         url: `/api/songs`,
         data: { song },
-        // contentType: false,
-        // processData: false
+        contentType: false,
+        processData: false
     });
 };
 
@@ -30,8 +30,8 @@ export const updateSong = (currentSong, updateSong) => {
         method: 'PATCH',
         url: `/api/songs/${currentSong.id}`,
         data: { updateSong },
-        // contentType: false,
-        // processData: false
+        contentType: false,
+        processData: false
     });
 };
 

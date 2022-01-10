@@ -2,6 +2,9 @@ class Song < ApplicationRecord
     validates :title, :artist, :genre, presence:true
     validates :genre, inclusion: { in: ['Trap', 'Study', 'Jazz', 'Classical', 'Hip Hop'] }
 
+    validate :ensure_image
+    validate :ensure_audio
+    
     has_one_attached :image_file
     has_one_attached :audio_file
 
@@ -9,4 +12,16 @@ class Song < ApplicationRecord
     primary_key: :id,
     foreign_key: :uploader_id,
     class_name: :User
+
+    def ensure_image
+        unless self.image_file.attached?
+            errors[:image_file] << "Must have image file"
+        end
+    end
+
+    def ensure_audio
+        unless self.audio_file.attached?
+            errors[:audio_file] << "Must have audio file"
+        end
+    end
 end

@@ -12,9 +12,11 @@ class Api::SongsController < ApplicationController
 
     def create
         @song = Song.new(song_params)
+        @song.uploader_id = current_user.id
 
         if @song.save
             render :show
+            # render json {message: "Upload Successful!"}
         else
             render json: @song.errors.full_messages, status: 422
         end
@@ -40,6 +42,6 @@ class Api::SongsController < ApplicationController
     private
 
     def song_params
-        params.require(:song).permit(:title, :artist, :uploader_id, :genre)
+        params.require(:song).permit(:title, :artist, :uploader_id, :genre, :image_file, :audio_file)
     end
 end
