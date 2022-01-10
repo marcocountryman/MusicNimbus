@@ -1,7 +1,9 @@
 import React from 'react'
 import NavBarContainer from '../navbar/nav_bar_container';
 import { Link } from 'react-router-dom';
-import { shuffle } from '../../util/misc_util'
+import { shuffle } from '../../util/misc_util';
+import SongPlayerContainer from '../song_player/song_player_container';
+import SongPlayer from '../song_player/song_player';
 
 class SongShow extends React.Component {
 
@@ -81,7 +83,7 @@ class SongShow extends React.Component {
 
                                             <div className = "sidebar-links">
                                                 <button className = "outside-link"><a href="https://github.com/marcocountryman" className = "link">GitHub</a></button>
-                                                    <button className = "outside-link"><a href="https://www.linkedin.com/" className = "link">LinkedIn</a></button>
+                                                <button className = "outside-link"><a href="https://www.linkedin.com/" className = "link">LinkedIn</a></button>
                                             </div>
 
                                             <div className = "tech-used">
@@ -102,8 +104,10 @@ class SongShow extends React.Component {
 
                                 </div>
                         </div>
-                </div>
+                    </div>          
+                <SongPlayerContainer/>
             </div>
+
         )
     }
 }
