@@ -38,7 +38,8 @@ class UploadForm extends React.Component {
         if (this.state.audioFile) {
             formData.append('song[audio_file]', this.state.audioFile);
         }
-        this.props.createSong(formData).then(this.handleUpload).then(this.props.history.push('./discover'))
+        this.props.createSong(formData)
+        // .then(this.handleUpload).then(this.props.history.push('./discover'))
 
     }
 
@@ -132,21 +133,23 @@ class UploadForm extends React.Component {
                                     
                                     </select>
                                     
-                                        <h3>Select Audio</h3>
+                                        <h3 className = "upload-label">Select Audio</h3>
                                         <input type="file"
                                         onChange = {this.handleAudio}
                                         placeholder='Select Audio'
+                                        className = "file-button"
                                         />
                                   
 
-                                        <h3>Select Image</h3>
+                                        <h3 className = "upload-label">Select Image</h3>
                                          <input type="file"
                                         onChange = {this.handleImage}
                                         placeholder='Select Image'
+                                        className = "file-button"
                                         />
                                    
 
-                                    <input type="submit" value = "Upload" />
+                                    <input type="submit" value = "Upload" className = "upload-button"/>
 
                                     {this.errorMessages()}
                             </form>
