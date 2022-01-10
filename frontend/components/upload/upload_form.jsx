@@ -38,9 +38,7 @@ class UploadForm extends React.Component {
         if (this.state.audioFile) {
             formData.append('song[audio_file]', this.state.audioFile);
         }
-        this.props.createSong(formData)
-        // .then(this.handleUpload).then(this.props.history.push('./discover'))
-
+        this.props.createSong(formData).then(() => this.props.history.push('./discover'))
     }
 
     handleUpload () {
@@ -100,7 +98,11 @@ class UploadForm extends React.Component {
                 <div className = 'upload-container'>
                     <div className = 'upload-form-container'>
                         <div className = "upload-top">
-                            TOP
+
+                            <div className = "upload-top-content">
+                                <h2 className = "upload-message">Drop that fire</h2>
+                                <span className='upload-fire'>🔥</span>
+                            </div>
                         </div>
                         
                         <div className = "upload-form">
@@ -123,6 +125,7 @@ class UploadForm extends React.Component {
 
                                     <select value = {this.state.genre}
                                     onChange = {this.handleGenre}
+                                    className = "upload-genre-list"
                                     >
                                         <option hidden> Pick a Genre</option>
                                         <option value="Hip Hop">Hip Hop</option> 
@@ -157,7 +160,20 @@ class UploadForm extends React.Component {
                         </div>
                         
                         <div className = "upload-bottom">
-                            BOTTOM
+                            <h3 className = 'copyright-message'>
+                                By uploading, you confirm that your sounds comply with our Terms of Use and you don't infringe anyone else's rights.
+                            </h3>
+
+                           <ul className = "tech-used-list">
+                                    <li className = "tech-used-item">React</li>
+                                    <li className = "tech-used-item">Redux</li>
+                                    <li className = "tech-used-item">JavaScript</li>
+                                    <li className = "tech-used-item">Ruby</li>
+                                    <li className = "tech-used-item">Rails</li>
+                                    <li className = "tech-used-item">AWS</li>
+                                    <li className = "tech-used-item">CSS</li>
+                                    <li className = "tech-used-item">HTML</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
