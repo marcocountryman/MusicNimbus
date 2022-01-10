@@ -81,7 +81,7 @@ class SongShow extends React.Component {
 
                                             <div className = "sidebar-links">
                                                 <button className = "outside-link"><a href="https://github.com/marcocountryman" className = "link">GitHub</a></button>
-                                                    <button className = "outside-link"><a href="https://www.linkedin.com/" className = "link">LinkedIn</a></button>
+                                                <button className = "outside-link"><a href="https://www.linkedin.com/" className = "link">LinkedIn</a></button>
                                             </div>
 
                                             <div className = "tech-used">
