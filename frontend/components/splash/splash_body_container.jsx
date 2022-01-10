@@ -1,20 +1,22 @@
 import SplashBody from "./splash_body";
 import { connect } from 'react-redux';
 import { openModal } from "../../action/modal_actions";
+import { fetchAllSongs } from "../../action/song_actions";
 
 
 const mSTP = (state) => {
 
     return {
-        song: state.entities.songs[ownProps.match.params.id],
         songs: Object.values(state.entities.songs)
     }
 }
 
+
 const mDTP = (dispatch) => {
 
     return {
-        openModal: modal => dispatch(openModal(modal))
+        openModal: modal => dispatch(openModal(modal)),
+        fetchAllSongs: () => dispatch(fetchAllSongs())
     }
 }
 
