@@ -2,8 +2,8 @@ class Song < ApplicationRecord
     validates :title, :artist, :genre, presence:true
     validates :genre, inclusion: { in: ['Trap', 'Study', 'Jazz', 'Classical', 'Hip Hop'] }
 
-    validate :ensure_image
-    validate :ensure_audio
+    # validate :ensure_image
+    # validate :ensure_audio
     
     has_one_attached :image_file
     has_one_attached :audio_file
