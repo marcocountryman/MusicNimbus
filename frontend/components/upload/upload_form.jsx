@@ -23,7 +23,7 @@ class UploadForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-
+        //comment
     }
 
     handleImage(e) {
