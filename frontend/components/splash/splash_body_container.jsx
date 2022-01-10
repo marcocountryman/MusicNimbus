@@ -2,6 +2,15 @@ import SplashBody from "./splash_body";
 import { connect } from 'react-redux';
 import { openModal } from "../../action/modal_actions";
 
+
+const mSTP = (state) => {
+
+    return {
+        song: state.entities.songs[ownProps.match.params.id],
+        songs: Object.values(state.entities.songs)
+    }
+}
+
 const mDTP = (dispatch) => {
 
     return {
@@ -9,4 +18,4 @@ const mDTP = (dispatch) => {
     }
 }
 
-export default connect(null, mDTP)(SplashBody);
+export default connect(mSTP, mDTP)(SplashBody);
