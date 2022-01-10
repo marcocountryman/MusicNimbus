@@ -12,12 +12,12 @@ export const fetchSong = (songId) => {
     });
 };
 
-export const createSong = (song) => {
-    debugger
+export const createSong = (formData) => {
+    
     return $.ajax({
         method: 'POST',
         url: `/api/songs`,
-        data: { song },
+        data: formData,
         contentType: false,
         processData: false
     });
@@ -29,7 +29,7 @@ export const updateSong = (currentSong, updateSong) => {
     return $.ajax({
         method: 'PATCH',
         url: `/api/songs/${currentSong.id}`,
-        data: { updateSong },
+        data: updateSong,
         contentType: false,
         processData: false
     });

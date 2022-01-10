@@ -32,7 +32,6 @@ const removeSong = (songId) => {
 
 const receiveSongErrors = (errors) => {
 
-    debugger
     return {
         type: RECEIVE_SONG_ERRORS,
         errors

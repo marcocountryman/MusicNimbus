@@ -12,9 +12,10 @@ class UploadForm extends React.Component {
             imageFile: null,
             audioFile: null
         }
-        this.handleSubmit.bind(this);
-        this.handleImage.bind(this);
-        this.handleAudio.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleImage = this.handleImage.bind(this);
+        this.handleAudio = this.handleAudio.bind(this);
+        this.handleGenre = this.handleGenre.bind(this);
     }
 
     componentWillUnmount() {
@@ -23,22 +24,32 @@ class UploadForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        //comment
+        const formData = new FormData();
+        formData.append('song[title]', this.state.title);
+        formData.append('song[artist]', this.state.artist);
+        formData.append('song[genre]', this.state.genre);
+        formData.append('song[uploader_id]', this.props.currentUser.id);
+        if (this.state.imageFile) {
+            formData.append('song[image_file]', this.state.imageFile);
+        }
+        if (this.state.audioFile) {
+            formData.append('song[audio_file]', this.state.audioFile);
+        }
+        this.props.createSong(formData)
     }
 
     handleImage(e) {
 
+        this.setState({ imageFile: e.currentTarget.files[0] });
     }
 
     handleAudio(e) {
 
+        this.setState({ audioFile: e.currentTarget.files[0] });
     }
 
     handleGenre(e) {
-
-        return (e) => {
-            this.setState({ genre: e.currentTarget.value });
-        }
+        this.setState({ genre: e.currentTarget.value });   
     }
 
     update(field) {
@@ -101,15 +112,24 @@ class UploadForm extends React.Component {
                                         <option value="Hype">Hype</option> 
                                     
                                     </select>
-
-                                    <input type="file"
                                     
-                                    />
+                                    <label> Song
+                                        <input type="file"
+                                        onChange = {this.handleAudio}
+                                        placeholder='Select Audio'
+                                        />
+                                    </label>
 
-                                    <input type="file"
-                                    
-                                    />
+                                    <label> Photo
+                                         <input type="file"
+                                        onChange = {this.handleImage}
+                                        placeholder='Select Image'
+                                        />
+                                    </label>
 
+                                    <input type="submit" value = "Upload" />
+
+                                    {this.errorMessages()}
                             </form>
 
                         </div>

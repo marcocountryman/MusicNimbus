@@ -12,7 +12,8 @@ class Api::SongsController < ApplicationController
 
     def create
         @song = Song.new(song_params)
-        @song.uploader_id = current_user.id
+
+        debugger
 
         if @song.save
             render :show
