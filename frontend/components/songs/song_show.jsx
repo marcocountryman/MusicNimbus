@@ -1,4 +1,4 @@
-import React from 'React'
+import React from 'react'
 import NavBarContainer from '../navbar/nav_bar_container';
 import { Link } from 'react-router-dom';
 import { shuffle } from '../../util/misc_util'
