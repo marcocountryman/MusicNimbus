@@ -5,7 +5,8 @@ const _nullPlay = {
     isPlaying: false
 };
 
-const songPlayReducer = (state, action) => {
+const songPlayReducer = (state = _nullPlay, action) => {
+    
     Object.freeze(state);
     const nextState = Object.assign({}, state);
 
