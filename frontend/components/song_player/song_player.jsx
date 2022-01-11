@@ -5,7 +5,9 @@ class SongPlayer extends React.Component {
     render() {
         
         return (
-            <h3>Song Player</h3>
+            <div className='song-player-container'>
+                <p className = "play-button">▶️</p>
+            </div>
         )
     }
 }

@@ -3,7 +3,6 @@ import NavBarContainer from '../navbar/nav_bar_container';
 import { Link } from 'react-router-dom';
 import { shuffle } from '../../util/misc_util';
 import SongPlayerContainer from '../song_player/song_player_container';
-import SongPlayer from '../song_player/song_player';
 
 class SongShow extends React.Component {
 

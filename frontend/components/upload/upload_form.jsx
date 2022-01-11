@@ -18,7 +18,7 @@ class UploadForm extends React.Component {
         this.handleImage = this.handleImage.bind(this);
         this.handleAudio = this.handleAudio.bind(this);
         this.handleGenre = this.handleGenre.bind(this);
-        this.handleUpload = this.handleUpload.bind(this);
+        // this.handleUpload = this.handleUpload.bind(this);
     }
 
     componentWillUnmount() {
@@ -41,16 +41,15 @@ class UploadForm extends React.Component {
         this.props.createSong(formData).then(() => this.props.history.push('./discover'))
     }
 
-    handleUpload () {
-    
-        this.setState({ uploadStatus: true })
-    }
+    // handleUpload () {
+    //     this.setState({ uploadStatus: true })
+    // }
 
     handleImage(e) {
         const file = e.currentTarget.files[0];
         const fileReader = new FileReader();
         fileReader.onloadend = () => {  
-            this.setState({ imageFile: file, preview: fileReader.result});
+            this.setState({ imageFile: file, preview: fileReader.result });
         };
         if (file) {
             fileReader.readAsDataURL(file);
@@ -58,7 +57,6 @@ class UploadForm extends React.Component {
     }
 
     handleAudio(e) {
-
         this.setState({ audioFile: e.currentTarget.files[0] });
     }
 

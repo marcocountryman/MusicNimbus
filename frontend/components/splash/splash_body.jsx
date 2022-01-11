@@ -18,9 +18,9 @@ class SplashBody extends React.Component {
     
         shuffle(this.props.songs);
         const songItems = this.props.songs.slice(0,12);
-        const renderSongs = songItems.map(song => {
+        const renderSongs = songItems.map((song, idx) => {
             return (
-                <li className="song-item">
+                <li key = {`song-${idx}`}className="song-item"  >
                     <img src= {song.imageUrl} alt="song" />
                     <label className = "song-title">{song.title}</label>
                     <label className = "artist-name">{song.artist}</label>
