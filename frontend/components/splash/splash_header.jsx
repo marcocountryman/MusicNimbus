@@ -18,7 +18,7 @@ const SplashHeader = (props) => {
                 </div>
             </div>
             
-            <h3 className = "splash-logo">Discover your sound with Music Nimbus</h3>
+            <h3 className = "splash-logo">Discover your sound</h3>
         </div>
     )
 }

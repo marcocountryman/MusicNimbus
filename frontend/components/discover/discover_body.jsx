@@ -12,7 +12,43 @@ class DiscoverBody extends React.Component {
         this.props.fetchAllSongs();
     }
 
-    render() {    
+    suggestionList() {
+        const randomNums = [];
+        let randomNum;
+        for (let i = 0; i < 3; i++) {
+            randomNum = Math.floor(Math.random() * this.props.songs.length);
+            if (!randomNums.includes(randomNum)) {
+                randomNums.push(randomNum);
+            }
+        }
+        const randomSongs = [];
+        randomNums.forEach(num => {
+            randomSongs.push(this.props.songs[num])
+        })
+        const randomSongList = randomSongs.map((song, idx) => {
+            return (
+                 <li className = "related-song-list-item" key = {`song-${idx}`}>
+                    <Link to = {`/songs/${song.id}`} className = "related-link">
+                        <img src={song.imageUrl} alt="trapsong" className= "related-image"/>   
+                    </Link>
+
+                    <div className = "related-song-info">
+                        <Link to = {`/songs/${song.id}`} className = "related-link">
+                            <span className = "related-title">{song.title}</span>
+                        </Link>
+                        <span className = "related-name">{song.artist}</span>
+                    </div>
+                    {/* <div className = "play-button-container">
+                        <PlayButtonContainer song = {song} />
+                    </div> */}
+                </li>
+            )
+        })
+        return randomSongList;
+    }
+
+    render() {
+        if (!this.props.songs.length) return null;    
         const trapItems = this.props.songs.filter(song => song.genre === "Trap");
         const renderTrap = trapItems.map((song, idx)=> {
             return (
@@ -173,7 +209,13 @@ class DiscoverBody extends React.Component {
                             </div>
                         
                         </div>
-
+                        <div>
+                            <span className = "sidebar-message">Suggestions from Nimbus Mixer</span>
+                            <ul className = "related-song-list">
+                                {this.suggestionList()}
+                            </ul>
+                        </div>
+                            
                         <div className = "sidebar-links">
                             <button className = "outside-link"><a href="https://github.com/marcocountryman" className = "link">GitHub</a></button>
                             <button className = "outside-link"><a href="https://www.linkedin.com/" className = "link">LinkedIn</a></button>

@@ -4,8 +4,10 @@
     height: 5%;
     display: flex;
     justify-content: center;
-    background-color: lightseagreen;
+    width: 80%;
+    background-color: #E7E9EB;
     width: 100%;
+    border-top: 1px solid gray;
 }
 
 .play-control {
@@ -33,6 +35,93 @@
     align-items: center;
     background-color: #ff004f;
 }
+
+.song-player-content {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.song-player-song-info {
+    display: flex;
+}
+
+.song-player-right {
+    display: flex;
+    justify-content: space-around;
+    // border: 2px solid gold;
+    width: 20%;
+    padding-right: 100px;
+    padding-top: 5px;
+}
+
+.song-player-artist-info {
+    display: flex;
+    flex-direction: column;   
+}
+
+.player-img {
+    width: 30px;
+    height: 30px;
+    padding-right: 10px;
+}
+
+.player-song {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    color: gray;
+}
+
+.player-artist {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.song-player-links {
+    // border: 2px solid black;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    text-decoration: none;
+    
+}
+
+.song-player-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.song-player-left {
+    // border: 2px solid gold;
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.song-player-left button {
+    border: none;
+    background-color: #E7E9EB;
+    font-size: 12px;
+    color: #333;
+}
+
+.song-player-left a {
+    text-decoration: none;
+    color: black;
+}
+
+
+// .related-title a {
+//     text-decoration: none;
+//     color: black;
+//     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+//     font-size: 12px;
+//     font-weight: 100;
+// }
 // li {
 //     .play-control {
 //         z-index: 1;
