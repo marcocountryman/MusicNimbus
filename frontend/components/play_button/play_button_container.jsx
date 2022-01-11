@@ -13,9 +13,9 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
 
     return {
-        playSong = () => dispatch(playSong()),
-        pauseSong = () => dispatch(pauseSong()),
-        recievePlaySong = song => dispatch(recievePlaySong(song))
+        playSong: () => dispatch(playSong()),
+        pauseSong: () => dispatch(pauseSong()),
+        recievePlaySong: song => dispatch(recievePlaySong(song))
     };
 };
 

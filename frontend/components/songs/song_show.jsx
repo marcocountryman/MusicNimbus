@@ -3,6 +3,7 @@ import NavBarContainer from '../navbar/nav_bar_container';
 import { Link } from 'react-router-dom';
 import { shuffle } from '../../util/misc_util';
 import SongPlayerContainer from '../song_player/song_player_container';
+import PlayButtonContainer from '../play_button/play_button_container';
 
 class SongShow extends React.Component {
 
@@ -47,10 +48,13 @@ class SongShow extends React.Component {
                                 <div className = "show-page-banner">
                                         <div className = 'show-banner-left'>
                                                 <div className = 'show-left-content'>
-                                                        <p className = "play-button">▶️</p>
-                                                        <div className = 'song-info'>
-                                                            <p className = 'play-top'>{this.props.song.title}</p>
-                                                            <p className = 'play-bottom'>{this.props.song.artist}</p>
+                                                        {/* <p className = "play-button">▶️</p> */}
+                                                        <div className = "left-info-container">
+                                                            <PlayButtonContainer song = {this.props.song} />
+                                                            <div className = 'song-info'>
+                                                                <button className = 'play-top'>{this.props.song.title}</button>
+                                                                <button className = 'play-bottom'>{this.props.song.artist}</button>
+                                                            </div>
                                                         </div>
                                                 </div>
                                                 <div className = 'show-right-content'>
@@ -104,7 +108,7 @@ class SongShow extends React.Component {
                                 </div>
                         </div>
                     </div>          
-                <SongPlayerContainer/>
+                {/* <SongPlayerContainer/> */}
             </div>
 
         )

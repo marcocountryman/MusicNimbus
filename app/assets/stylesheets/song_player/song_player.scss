@@ -8,7 +8,59 @@
     width: 100%;
 }
 
+.play-control {
+    background-color: #ff004f;
+    color: white;
+    // border-radius: 50%;
+    font-size: 24px;
+    height: 50px;
+    width: 50px;
+    // border: 2px solid gold;
+    // visibility: hidden;
+    // overflow: hidden;
+    // position: relative;
+    // opacity: 0;
+    z-index: 1;
+}
 
+.play-container {
+    // border: 2px solid hotpink;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff004f;
+}
+// li {
+//     .play-control {
+//         z-index: 1;
+//     }
+//     .discover-images {
+//         z-index: 100;
+//     }
+// }
+
+// li:hover {
+//     .play-control {
+//         z-index: 100;
+//         border: 1px solid gold;
+//         position: absolute;
+//     }
+//     .discover-images {
+//         z-index: 1;
+//     }
+// }
+
+// .song-container img {
+//     position: absolute;
+// }
+
+// .song-container .play-control {
+//     position: absolute;
+//     opacity: 0;
+// }
 
 
 

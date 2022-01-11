@@ -47,6 +47,7 @@
 }
 
 .song-container {
+    // border: 2px solid gold;
     display: flex;
     flex-direction: column;
     padding-bottom: 10px;
@@ -151,3 +152,16 @@
     text-decoration: none;
 }
 
+.song-container .playbutton-container {
+    display: none;
+    position: absolute;
+}
+
+.play-button-container {
+    display: none;
+    border: 2px solid black;
+}
+
+.playbutton-container:hover > .playbutton-container {
+    display: inline-block;
+}

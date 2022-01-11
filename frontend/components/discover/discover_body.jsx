@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PlayButtonContainer from '../play_button/play_button_container';
 
 class DiscoverBody extends React.Component {
     
@@ -16,11 +17,15 @@ class DiscoverBody extends React.Component {
         const renderTrap = trapItems.map((song, idx)=> {
             return (
                 <li className = "song-container" key = {`song-${idx}`}>
+                    
                     <img src={song.imageUrl} alt="trapsong" className= "discover-images"/>
                     <Link to = {`/songs/${song.id}`} className = "genre-link">
                         <span className = "song-title">{song.title}</span>
                     </Link>
                     <span className = "artist-name">{song.artist}</span>
+                    <div className = "play-button-container">
+                        <PlayButtonContainer song = {song} />
+                    </div>
                 </li>
             )
         })
@@ -34,6 +39,9 @@ class DiscoverBody extends React.Component {
                         <span className = "song-title">{song.title}</span>
                     </Link>
                     <span className = "artist-name">{song.artist}</span>
+                    <div className = "play-button-container">
+                        <PlayButtonContainer song = {song} />
+                    </div>
                 </li>
             )
         })
@@ -47,6 +55,9 @@ class DiscoverBody extends React.Component {
                         <span className = "song-title">{song.title}</span>
                     </Link>
                     <span className = "artist-name">{song.artist}</span>
+                    <div className = "play-button-container">
+                        <PlayButtonContainer song = {song} />
+                    </div>
                 </li>
             )
         })
@@ -60,6 +71,9 @@ class DiscoverBody extends React.Component {
                         <span className = "song-title">{song.title}</span>
                     </Link>
                     <span className = "artist-name">{song.artist}</span>
+                    <div className = "play-button-container">
+                        <PlayButtonContainer song = {song} />
+                    </div>
                 </li>
             )
         })
@@ -73,6 +87,9 @@ class DiscoverBody extends React.Component {
                         <span className = "song-title">{song.title}</span>
                     </Link>
                     <span className = "artist-name">{song.artist}</span>
+                    <div className = "play-button-container">
+                        <PlayButtonContainer song = {song} />
+                    </div>
                 </li>
             )
         })

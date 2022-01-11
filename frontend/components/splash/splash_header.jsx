@@ -6,14 +6,19 @@ const SplashHeader = (props) => {
 
     return (
         <div className = "header-content">
-            <div className = "header-logo">
-                <span>☁️</span>
-                <Link to = "/" className = "header-logo-text">Music Nimbus</Link>
+            <div className = "header-content-top">
+                <div className = "header-logo">
+                    <span className = "cloud">☁️</span>
+                    <Link to = "/" className = "header-logo-text">Music Nimbus</Link>
+                </div>
+                
+                <div className = "header-buttons">
+                    <button  className = "login-btn" onClick = {() => props.openModal('login')}>Sign In</button>
+                    <button className = "signup-btn" onClick = {() => props.openModal('signup')}>Create Account</button>
+                </div>
             </div>
-            <div className = "header-buttons">
-                <button  className = "login-btn" onClick = {() => props.openModal('login')}>Sign In</button>
-                <button className = "signup-btn" onClick = {() => props.openModal('signup')}>Create Account</button>
-            </div>
+            
+            <h3 className = "splash-logo">Discover your sound with Music Nimbus</h3>
         </div>
     )
 }
