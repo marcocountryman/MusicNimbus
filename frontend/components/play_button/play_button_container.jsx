@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import PlayButton from "./play_button";
-import { playSong, pauseSong, recievePlaySong } from "../../action/song_play_actions";
+import { playSong, pauseSong, receivePlaySong } from "../../action/song_play_actions";
 
 const mSTP = (state) => {
 
@@ -15,7 +15,7 @@ const mDTP = (dispatch) => {
     return {
         playSong: () => dispatch(playSong()),
         pauseSong: () => dispatch(pauseSong()),
-        recievePlaySong: song => dispatch(recievePlaySong(song))
+        receivePlaySong: song => dispatch(receivePlaySong(song))
     };
 };
 

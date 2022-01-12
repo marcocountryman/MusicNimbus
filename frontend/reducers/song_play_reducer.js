@@ -1,4 +1,4 @@
-import { PLAY_SONG, PAUSE_SONG, RECIEVE_PLAY_SONG, CLEAR_SONG } from "../action/song_play_actions";
+import { PLAY_SONG, PAUSE_SONG, RECEIVE_PLAY_SONG, CLEAR_SONG } from "../action/song_play_actions";
 
 const _nullPlay = {
     currentSong: null,
@@ -11,7 +11,7 @@ const songPlayReducer = (state = _nullPlay, action) => {
     const nextState = Object.assign({}, state);
 
     switch(action.type) {
-        case RECIEVE_PLAY_SONG:
+        case RECEIVE_PLAY_SONG:
             nextState.currentSong = action.song
             nextState.isPlaying = true;
             return nextState;

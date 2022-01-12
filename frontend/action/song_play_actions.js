@@ -1,6 +1,6 @@
 export const PLAY_SONG = "PLAY_SONG";
 export const PAUSE_SONG = "PAUSE_SONG";
-export const RECIEVE_PLAY_SONG = "RECIEVE_PLAY_SONG";
+export const RECEIVE_PLAY_SONG = "RECEIVE_PLAY_SONG";
 export const CLEAR_SONG = "CLEAR_SONG";
 
 export const playSong = () => {
@@ -11,16 +11,16 @@ export const playSong = () => {
 };
 
 export const pauseSong = () => {
-
+    // debugger
     return {
-        type: PLAY_SONG
+        type: PAUSE_SONG
     };
 };
 
-export const recievePlaySong = (song) => {
+export const receivePlaySong = (song) => {
 
     return {
-        type: RECIEVE_PLAY_SONG,
+        type: RECEIVE_PLAY_SONG,
         song
     };
 };
