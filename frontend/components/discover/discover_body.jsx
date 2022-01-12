@@ -39,9 +39,6 @@ class DiscoverBody extends React.Component {
                             </Link>
                             <span className = "suggested-name">{song.artist}</span>
                     </div>
-                    {/* <div className = "play-button-container">
-                        <PlayButtonContainer song = {song} />
-                    </div> */}
                 </li>
             )
         })
@@ -49,7 +46,8 @@ class DiscoverBody extends React.Component {
     }
 
     render() {
-        if (!this.props.songs.length) return null;    
+        if (!this.props.songs.length) return null;
+            
         const trapItems = this.props.songs.filter(song => song.genre === "Trap");
         const renderTrap = trapItems.map((song, idx)=> {
             return (
