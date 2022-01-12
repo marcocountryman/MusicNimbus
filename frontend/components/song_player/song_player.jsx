@@ -13,13 +13,14 @@ class SongPlayer extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (prevProps !== this.props && this.props.isPlaying) {
+        if (this.props.isPlaying) {
             let music = document.getElementById("music-source");
             music.play();
-        } 
-        if (!this.props.isPlaying) {
+        } if (this.props.currentSong) {
+            if (!this.props.isPlaying) {
             let music = document.getElementById("music-source");
             music.pause();
+            }
         }
     }
 
@@ -37,18 +38,18 @@ class SongPlayer extends React.Component {
         this.props.pauseSong();
     }
 
-    // playMusic() {
-       
-    //     setTimeout(() => {
-    //     const playThis = document.getElementById('music-source');
-    //         playThis.play()
-    //     }, 100);
-    // }
+    componentWillUnmount() {
+        if (this.props.userId) {
+            this.props.clearSong()
+        }
+    }
 
     render() {
         const playThis = document.getElementById('music-source');
         
         if (!this.props.currentSong) return null;
+
+       
 
         let playControl = this.props.isPlaying ? 
         <FontAwesomeIcon icon = {faPause} onClick = {this.pauseMusic}/> :

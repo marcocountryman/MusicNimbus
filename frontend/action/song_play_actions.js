@@ -11,7 +11,7 @@ export const playSong = () => {
 };
 
 export const pauseSong = () => {
-    // debugger
+    
     return {
         type: PAUSE_SONG
     };
@@ -26,7 +26,7 @@ export const receivePlaySong = (song) => {
 };
 
 export const clearSong = () => {
-
+    
     return {
         type: CLEAR_SONG
     }

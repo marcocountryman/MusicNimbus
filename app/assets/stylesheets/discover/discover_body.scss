@@ -152,14 +152,6 @@
     text-decoration: none;
 }
 
-.play-button-container {
-    display: none;
-}
-
-.playbutton-container:hover > .playbutton-container {
-    display: inline-block;
-}
-
 .suggested-song-list-item {
    display: flex;
    padding-bottom: 10px;
@@ -212,4 +204,12 @@ a .suggested-title {
 
 .suggested-link {
     text-decoration: none;
+}
+
+.play-button-container {
+    display: none;
+}
+
+.playbutton-container:hover > .playbutton-container {
+    display: inline-block;
 }

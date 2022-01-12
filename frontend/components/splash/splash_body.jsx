@@ -31,7 +31,7 @@ class SplashBody extends React.Component {
         return (
             <div className = "splash-body" >
                 <div className = "splash-box-1">
-                    <button className = "upload-btn" onClick = {() => props.openModal('login')}>Upload your own</button>
+                    <button className = "upload-btn" onClick = {() => this.props.openModal('login')}>Upload your own</button>
                     <h2 className = "splash-message-1">Hear what's trending for free in the Music Nimbus community</h2>
                 </div>
                 <div className = "splash-box-2">
@@ -69,10 +69,10 @@ class SplashBody extends React.Component {
                 <div className = "splash-box-5">
                     <div className = "create-message-1">Thanks for listening. Now join in.</div>
                     <div className = "create-message-2">Save tracks, follow users, build playlists. All for free.</div>
-                    <div className = "create-button-container"><button className = "create-button" onClick = {() => props.openModal('signup')}>Create Account</button></div>
+                    <div className = "create-button-container"><button className = "create-button" onClick = {() => this.props.openModal('signup')}>Create Account</button></div>
                     <div className = "create-message-container">
                         <p className = "create-signin-message">Already have an account?</p>
-                        <button className = "create-signin-butn" onClick = {() => props.openModal('login')}>Sign In</button>
+                        <button className = "create-signin-butn" onClick = {() => this.props.openModal('login')}>Sign In</button>
                     </div>
                 </div>
 

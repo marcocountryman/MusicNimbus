@@ -7,6 +7,7 @@ import Modal from './modals/modal';
 import UserShowContainer from './user/user_container';
 import UploadFormContainer from './upload/upload_form_container';
 import SongShowContainer from './songs/song_show_container';
+import SongPlayerContainer from './song_player/song_player_container';
 
 //PENDING DELETION
 import LoginFormContainer from './session/login_form_container';
@@ -17,6 +18,8 @@ const App = () => {
     return (
         <div className = "app">
             <Modal/>
+            <ProtectedRoute path = "/" component={SongPlayerContainer} />
+            
             <Switch>
 
                 {/* <AuthRoute path="/login" component={LoginFormContainer} />

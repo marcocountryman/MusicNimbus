@@ -9,7 +9,7 @@ const Discover = () => {
          <div className = "discover-container">
                 <NavBarContainer/>
                 <DiscoverBodyContainer/>
-                <SongPlayerContainer/>
+                {/* <SongPlayerContainer/> */}
         </div>
     )
 }

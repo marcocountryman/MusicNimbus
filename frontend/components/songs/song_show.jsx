@@ -108,7 +108,7 @@ class SongShow extends React.Component {
                                 </div>
                         </div>
                     </div>          
-                <SongPlayerContainer/>
+                {/* <SongPlayerContainer/> */}
             </div>
 
         )

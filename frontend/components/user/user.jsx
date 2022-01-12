@@ -13,7 +13,7 @@ class UserShow extends React.Component {
         return (
             <div>
                 <NavBarContainer/>
-                <SongPlayerContainer/>
+                {/* <SongPlayerContainer/> */}
             </div>
         )
     }
