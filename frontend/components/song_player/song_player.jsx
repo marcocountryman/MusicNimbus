@@ -25,14 +25,12 @@ class SongPlayer extends React.Component {
     }
 
     playMusic() {
-        // debugger
         const music = document.getElementById('music-source');
         music.play()
         this.props.playSong();
     }
 
     pauseMusic() {
-        // debugger
         const music = document.getElementById('music-source');
         music.pause()
         this.props.pauseSong();
@@ -54,10 +52,7 @@ class SongPlayer extends React.Component {
         let playControl = this.props.isPlaying ? 
         <FontAwesomeIcon icon = {faPause} onClick = {this.pauseMusic}/> :
         <FontAwesomeIcon icon = {faPlay} onClick = {this.playMusic} /> 
-        // debugger
-        // if (this.props.currentSong.audioSource ) {
-        //     this.playMusic()
-        // }
+
         return (
             <div className='song-player-container'>
                 <div className = "song-player-content">

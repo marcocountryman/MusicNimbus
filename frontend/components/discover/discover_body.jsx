@@ -6,25 +6,25 @@ class DiscoverBody extends React.Component {
     
     constructor(props) {
         super(props)
+        this.state = {
+            count: 0
+        }
     }
 
     componentDidMount() {
         this.props.fetchAllSongs();
+     
     }
 
     suggestionList() {
-        const randomNums = [];
+        const randomSongs = [];
         let randomNum;
         for (let i = 0; i < 3; i++) {
             randomNum = Math.floor(Math.random() * this.props.songs.length);
-            if (!randomNums.includes(randomNum)) {
-                randomNums.push(randomNum);
+            if (!randomSongs.includes(this.props.songs[randomNum])) {
+                randomSongs.push(this.props.songs[randomNum]);
             }
         }
-        const randomSongs = [];
-        randomNums.forEach(num => {
-            randomSongs.push(this.props.songs[num])
-        })
         const randomSongList = randomSongs.map((song, idx) => {
             return (
                  <li className = "suggested-song-list-item" key = {`song-${idx}`}>

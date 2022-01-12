@@ -30,10 +30,12 @@ const PlayButton = (props) => {
     } 
 
         return (
-            
-            <div>
+
+            <>
                 {playControl}
-            </div>
+            </>
+            
+           
         )
     
 }
