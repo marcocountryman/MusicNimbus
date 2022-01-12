@@ -48,7 +48,6 @@
 }
 
 .song-container {
-    // border: 2px solid gold;
     display: flex;
     flex-direction: column;
     padding-bottom: 10px;
@@ -153,59 +152,64 @@
     text-decoration: none;
 }
 
-// .song-container .playbutton-container {
-//     // display: none;
-//     // position: absolute;
-// }
-
 .play-button-container {
     display: none;
-    border: 2px solid black;
 }
 
 .playbutton-container:hover > .playbutton-container {
     display: inline-block;
 }
 
-.related-song-list-item {
-    border: 2px solid gold;
-    display: flex;
+.suggested-song-list-item {
+   display: flex;
+   padding-bottom: 10px;
 }
 
-.related-song-list {
-    border: 2px solid black;
+.suggested-song-list {
+    padding-top: 15px;
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;
 }
 
-.related-image {
+.suggested-image {
     width: 65px;
     height: 65px;
     padding-right: 5px;
 }
 
-.related-song-info {
-    // display: flex;
-    border: 2px solid green;
+.suggested-song-info {
     display: flex;
     flex-direction: column;
+}
+
+.suggested-title {
+    text-decoration: none;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 100;
     padding-top: 0;
     margin-top: 0;
 }
 
-.related-title {
-    text-decoration: none;
-    color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 12px;
-    font-weight: 100;
-}
-
-.related-name {
+.suggested-name {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 12px;
     font-weight: 100;
     color: gray;
+    padding-bottom: 5px;
 }
 
-a .related-title {
+a .suggested-title {
+    text-decoration: none;
+}
+
+.suggested-message {
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100;
+}
+
+.suggested-link {
     text-decoration: none;
 }

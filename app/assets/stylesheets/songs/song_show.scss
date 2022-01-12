@@ -31,7 +31,6 @@
 
 .show-banner-left {
     width: 75%;
-    // border: 2px solid green;
 }
 
 .show-banner-right {
@@ -54,12 +53,10 @@
     padding-top: 25px;
     padding-left: 25px;
     display: flex;
-    // border: 2px solid hotpink;
     width: 45%;
 }
 
 .left-info-container {
-    // border: 2px solid black;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -99,7 +96,6 @@
 }
 
 .song-info {
-    // border: 2px solid gold;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -119,16 +115,8 @@
     cursor: default;
 }
 
-// .play-button {
-//     cursor: pointer;
-//     font-size: 58px;
-//     padding-right: 35px;
-// }
-
 .related-genre-list {
-    // padding-top: 10px;
     border-bottom: 1px solid #999999;
-    // padding-bottom: 10px;
 }
 
 .related-genre-item {

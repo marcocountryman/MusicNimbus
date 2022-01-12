@@ -27,16 +27,17 @@ class DiscoverBody extends React.Component {
         })
         const randomSongList = randomSongs.map((song, idx) => {
             return (
-                 <li className = "related-song-list-item" key = {`song-${idx}`}>
-                    <Link to = {`/songs/${song.id}`} className = "related-link">
-                        <img src={song.imageUrl} alt="trapsong" className= "related-image"/>   
-                    </Link>
-
-                    <div className = "related-song-info">
-                        <Link to = {`/songs/${song.id}`} className = "related-link">
-                            <span className = "related-title">{song.title}</span>
+                 <li className = "suggested-song-list-item" key = {`song-${idx}`}>
+                     <div>
+                        <Link to = {`/songs/${song.id}`} className = "suggested-link">
+                            <img src={song.imageUrl} alt="trapsong" className= "suggested-image"/>   
                         </Link>
-                        <span className = "related-name">{song.artist}</span>
+                    </div>
+                    <div className = "suggested-song-info">
+                            <Link to = {`/songs/${song.id}`} className = "suggested-link">
+                                <span className = "suggested-title">{song.title}</span>
+                            </Link>
+                            <span className = "suggested-name">{song.artist}</span>
                     </div>
                     {/* <div className = "play-button-container">
                         <PlayButtonContainer song = {song} />
@@ -210,8 +211,8 @@ class DiscoverBody extends React.Component {
                         
                         </div>
                         <div>
-                            <span className = "sidebar-message">Suggestions from Nimbus Mixer</span>
-                            <ul className = "related-song-list">
+                            <span className = "suggested-message">Suggestions from Nimbus Mixer</span>
+                            <ul className = "suggested-song-list">
                                 {this.suggestionList()}
                             </ul>
                         </div>
