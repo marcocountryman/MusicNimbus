@@ -10,19 +10,22 @@ class UserShow extends React.Component {
 
     componentDidMount() {
         this.props.fetchUser(this.props.match.params.userId);
-        debugger
     }
 
     render() {
 
-        return (
-            <div>
-                {/* <NavBarContainer/> */}
+        if (!this.props.user) return null;
 
-                <div>
-                    HELLO FROM USER 1
+        return (
+            <div className = "user-content-container">
+                <div className = "user-top">
+
+                    <div className= 'user-top-left'>
+                        <img src= {this.props.user.defaultPhoto} alt= "default-pic" className='user-pic'/>
+                        <span className = "profile-username">{this.props.user.displayname}</span>
+                    </div>
+
                 </div>
-                {/* <SongPlayerContainer/> */}
             </div>
         )
     }

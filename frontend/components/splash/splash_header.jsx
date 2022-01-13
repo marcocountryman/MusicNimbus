@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { openModal } from '../../action/modal_actions';
 
 const SplashHeader = (props) => {
 

@@ -9,19 +9,12 @@ class SongShow extends React.Component {
 
     constructor(props) {
         super(props)
-
-        // this.sendToUser = this.sendToUser.bind(this);
     }
 
     componentDidMount() {
        this.props.fetchSong(this.props.match.params.id);
        this.props.fetchAllSongs();
-    //    debugger
     }
-
-    // sendToUser() {
-    //     this.props.history.push(`/users/${this.props.song.uploader.id}`)
-    // }
 
     render() {
 
@@ -48,15 +41,12 @@ class SongShow extends React.Component {
 
         return (
             <div>
-                {/* <NavBarContainer/> */}
-
                 <div className ='show-page-container'>
                         
                         <div className = 'show-page-content'>
                                 <div className = "show-page-banner">
                                         <div className = 'show-banner-left'>
                                                 <div className = 'show-left-content'>
-                                                        {/* <p className = "play-button">▶️</p> */}
                                                         <div className = "left-info-container">
                                                             <PlayButtonContainer song = {this.props.song} />
                                                             <div className = 'song-info'>
@@ -93,10 +83,7 @@ class SongShow extends React.Component {
                                                         <img src="https://music-nimbus-seeds.s3.amazonaws.com/comment_holder.jpg" alt="construction" className = "placeholder-pic"/>
                                                         <h3 className = "placeholder-message">Seems a little quite over here.</h3>
                                                    
-                                                   </div>
-                                                    
-                                                    
-                                                    
+                                                   </div>       
                                             </div>
                                     </div>
 
@@ -133,9 +120,7 @@ class SongShow extends React.Component {
                                 </div>
                         </div>
                     </div>          
-                {/* <SongPlayerContainer/> */}
             </div>
-
         )
     }
 }

@@ -1,5 +1,5 @@
-json.extract! user, :id, :email, :displayname, :songs
+json.extract! user, :id, :email, :displayname
 
 if !user.photo.attached?
-    json.defaultPhoto "https://music-nimbus-seeds.s3.amazonaws.com/default.jpg"
+    json.defaultPhoto "https://music-nimbus-seeds.s3.amazonaws.com/other-drake.jpg"
 end

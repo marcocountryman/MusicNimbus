@@ -13,7 +13,6 @@ class DiscoverBody extends React.Component {
 
     componentDidMount() {
         this.props.fetchAllSongs();
-     
     }
 
     suggestionList() {
@@ -53,8 +52,7 @@ class DiscoverBody extends React.Component {
             return (
                 <li className = "song-container" key = {`song-${idx}`}>
                     
-                    {/* <img src={song.imageUrl} alt="trapsong" className= "discover-images"/> */}
-                    <img src= {window.tupac} alt="Tupac" className = 'discover-images'/>
+                    <img src={song.imageUrl} alt="trapsong" className= "discover-images"/>
                     <Link to = {`/songs/${song.id}`} className = "genre-link">
                         <span className = "song-title">{song.title}</span>
                     </Link>
@@ -70,8 +68,8 @@ class DiscoverBody extends React.Component {
         const renderHipHop = hipHopItems.map((song,idx) => {
             return (
                 <li className = "song-container" key = {`song-${idx}`}>
-                    {/* <img src={song.imageUrl} alt="hiphopsong" className= "discover-images"/> */}
-                    <img src= {window.tupac} alt="Tupac" className = 'discover-images'/>
+                    <img src={song.imageUrl} alt="hiphopsong" className= "discover-images"/>
+
                     <Link to = {`/songs/${song.id}`} className = "genre-link">
                         <span className = "song-title">{song.title}</span>
                     </Link>
@@ -87,8 +85,8 @@ class DiscoverBody extends React.Component {
         const renderStudy = studyItems.map((song,idx) => {
             return (
                 <li className = "song-container" key = {`song-${idx}`}>
-                    {/* <img src={song.imageUrl} alt="studysong" className= "discover-images"/> */}
-                    <img src= {window.tupac} alt="Tupac" className = 'discover-images'/>
+                    <img src={song.imageUrl} alt="studysong" className= "discover-images"/>
+
                     <Link to = {`/songs/${song.id}`} className = "genre-link">
                         <span className = "song-title">{song.title}</span>
                     </Link>
@@ -104,8 +102,7 @@ class DiscoverBody extends React.Component {
         const renderJazz = jazzItems.map((song, idx)=> {
             return (
                 <li className = "song-container" key = {`song-${idx}`}>
-                    {/* <img src={song.imageUrl} alt="jazzsong" className= "discover-images"/> */}
-                    <img src= {window.tupac} alt="Tupac" className = 'discover-images'/>
+                    <img src={song.imageUrl} alt="jazzsong" className= "discover-images"/>
                     <Link to = {`/songs/${song.id}`} className = "genre-link">
                         <span className = "song-title">{song.title}</span>
                     </Link>
@@ -121,8 +118,7 @@ class DiscoverBody extends React.Component {
         const renderClassical = classicalItems.map((song, idx) => {
             return (
                 <li className = "song-container" key = {`song-${idx}`}>
-                    {/* <img src={song.imageUrl} alt="classicalsong" className= "discover-images"/> */}
-                    <img src= {window.tupac} alt="Tupac" className = 'discover-images'/>
+                    <img src={song.imageUrl} alt="classicalsong" className= "discover-images"/>
                     <Link to = {`/songs/${song.id}`} className = "genre-link">
                         <span className = "song-title">{song.title}</span>
                     </Link>

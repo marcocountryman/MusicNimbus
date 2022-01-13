@@ -59,9 +59,7 @@ class SongPlayer extends React.Component {
     }
 
     componentWillUnmount() {
-        if (this.props.userId) {
-            this.props.clearSong()
-        }
+        this.props.clearSong()     
     }
 
     muteMusic() {

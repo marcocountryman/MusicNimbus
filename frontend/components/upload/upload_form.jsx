@@ -19,7 +19,6 @@ class UploadForm extends React.Component {
         this.handleImage = this.handleImage.bind(this);
         this.handleAudio = this.handleAudio.bind(this);
         this.handleGenre = this.handleGenre.bind(this);
-        // this.handleUpload = this.handleUpload.bind(this);
     }
 
     componentWillUnmount() {
@@ -90,7 +89,6 @@ class UploadForm extends React.Component {
 
         return (
             <div>
-                {/* <NavBarContainer/> */}
                 <div className = 'upload-container'>
                     <div className = 'upload-form-container'>
                         <div className = "upload-top">
@@ -173,7 +171,6 @@ class UploadForm extends React.Component {
                         </div>
                     </div>
                 </div>
-                {/* <SongPlayerContainer/> */}
             </div>
         )
     }
