@@ -7,9 +7,19 @@ class SongPlayer extends React.Component {
 
     constructor(props) {
         super(props)
+        this.state = {
+            duration: 0,
+            currentTime: 0,
+            intId: null
+        }
 
         this.playMusic = this.playMusic.bind(this);
         this.pauseMusic = this.pauseMusic.bind(this);
+        this.setDuration = this.setDuration.bind(this);
+        this.setCurrentTime = this.setCurrentTime.bind(this);
+        this.calculateTime = this.calculateTime.bind(this);
+        this.updateCurrentTime = this.updateCurrentTime.bind(this);
+        this.updatePlayer = this.updatePlayer.bind(this);
     }
 
     componentDidUpdate(prevProps) {
@@ -22,6 +32,23 @@ class SongPlayer extends React.Component {
             music.pause();
             }
         }
+    }
+
+    calculateTime(secs) {
+        const minutes = Math.floor(secs/60);
+        const seconds = Math.floor(secs % 60 );
+        const newSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`
+        return `${minutes} : ${newSeconds}`;  
+    }
+
+    setDuration() {
+        const music = document.getElementById('music-source');
+        this.setState({ duration: this.calculateTime(music.duration)})
+    }
+
+    setCurrentTime() {
+        const music = document.getElementById('music-source');
+        this.setState({ currentTime: this.calculateTime(music.currentTime) })
     }
 
     playMusic() {
@@ -42,12 +69,26 @@ class SongPlayer extends React.Component {
         }
     }
 
+    updateCurrentTime() {
+        // const music = document.getElementById('music-source')
+        // const intId = setInterval(() => {
+        //     this.setState({ currentTime: this.calculateTime(music.currentTime) })
+        // }, 1000);
+        // setInterval(intId);
+        // this.setState({ intId: intId })
+    }
+
+    updatePlayer() {
+        const music = document.getElementById('music-source');
+        const bar = document.getElementById('song-progress');
+
+        bar.value = music.currentTime
+    }
+
     render() {
-        const playThis = document.getElementById('music-source');
+        
         
         if (!this.props.currentSong) return null;
-
-       
 
         let playControl = this.props.isPlaying ? 
         <FontAwesomeIcon icon = {faPause} onClick = {this.pauseMusic}/> :
@@ -60,6 +101,9 @@ class SongPlayer extends React.Component {
                     <audio
                     id = "music-source"
                     src = {this.props.currentSong.audioSource}
+                    onLoadedMetadata={this.setDuration}
+                    onPlaying={this.setCurrentTime}
+                    onTimeUpdate={this.updateCurrentTime}
                     />
                     
                     <div className = "song-player-left">
@@ -86,7 +130,19 @@ class SongPlayer extends React.Component {
                     </div>
                     
                     <div className = "song-player-middle">
-                            <input type="range" min= "0" max = {this.props.currentSong.duration} className = "song-progress" />
+                                <div className = "time-now" onChange = {this.setCurrentTime}>
+                                    {this.state.currentTime}
+                                </div>
+
+                                <input type="range"
+                                onChange = {this.updatePlayer} 
+                                max = {this.state.duration}
+                                // value = {this.state.currentTime}
+                                className = "song-progress" />
+
+                                <div className = "duration">
+                                    {this.state.duration}
+                                </div>
                     </div>
 
                     <div className = "song-player-right">
@@ -94,10 +150,13 @@ class SongPlayer extends React.Component {
                         <FontAwesomeIcon icon = {faVolumeDown} />
 
                         <div className = 'song-player-song-info'>
-                                <img src={this.props.currentSong.imageUrl} 
-                                alt="player-img"
-                                className = "player-img"
-                                 />
+                                <Link to = {`/songs/${this.props.currentSong.id}`}>
+                                    <img src={this.props.currentSong.imageUrl} 
+                                    alt="player-img"
+                                    className = "player-img"
+                                    />
+                                </Link>
+                                    
                                 <div className = "song-player-artist-info">
                                     <span className = "player-song">{this.props.currentSong.title}</span>
                                     <span className = "player-artist">{this.props.currentSong.artist}</span>

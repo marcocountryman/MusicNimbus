@@ -22,6 +22,7 @@
     border-right: 1px solid #999999;
     padding-right: 10px;
     padding-top: 20px;
+    z-index: 0;
 }
 
 .discover-sidebar {
@@ -195,13 +196,16 @@ a .suggested-title {
 
 .song-container > .play-button-container {
     display: none;
+    // color: blue;
+    // background-color: blue;
 }
 
 .song-container:hover > .play-button-container {
     display: block;
     position: absolute;
     top: 50px;
-    left: 60px; 
+    left: 60px;
+     
 }
 
 .song-container {

@@ -3,8 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 
 const PlayButton = (props) => {
-    const nowPlaying = document.getElementById('music-source');
-
+    
     let playControl = null;
     
     if (!props.currentSong) {
@@ -28,16 +27,11 @@ const PlayButton = (props) => {
                             <FontAwesomeIcon icon = {faPlay} className = "play-control" />
                     </div>
     } 
-
         return (
-
             <>
                 {playControl}
-            </>
-            
-           
-        )
-    
+            </>   
+        )   
 }
 
 export default PlayButton;

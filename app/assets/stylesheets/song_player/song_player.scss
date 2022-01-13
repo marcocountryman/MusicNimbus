@@ -115,7 +115,7 @@
 }
 
 .song-progress {
-    width: 100%;
+    width: 80%;
     height: 2px;
     text-decoration: none;
     background-color: lightgray;
@@ -128,4 +128,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.duration {
+    // border: 2px solid gold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}
+
+.time-now {
+    // border: 2px solid red;
+    color: #ff004f;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
 }
