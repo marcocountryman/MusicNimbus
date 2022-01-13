@@ -42,9 +42,6 @@ class UploadForm extends React.Component {
         this.props.createSong(formData).then(() => this.props.history.push('./discover'))
     }
 
-    // handleUpload () {
-    //     this.setState({ uploadStatus: true })
-    // }
 
     handleImage(e) {
         const file = e.currentTarget.files[0];

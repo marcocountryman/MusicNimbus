@@ -18,5 +18,4 @@ export const fetchUser = (userId) => (dispatch) => {
   ), error => (
     dispatch(receiveErrors(error.responseJSON))
   ))
-
 }

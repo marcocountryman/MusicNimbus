@@ -27,11 +27,12 @@ const PlayButton = (props) => {
                             <FontAwesomeIcon icon = {faPlay} className = "play-control" />
                     </div>
     } 
-        return (
-            <>
-                {playControl}
-            </>   
-        )   
+    
+    return (
+        <>
+            {playControl}
+        </>   
+    )   
 }
 
 export default PlayButton;

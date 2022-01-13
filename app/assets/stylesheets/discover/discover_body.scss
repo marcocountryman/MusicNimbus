@@ -196,16 +196,13 @@ a .suggested-title {
 
 .song-container > .play-button-container {
     display: none;
-    // color: blue;
-    // background-color: blue;
 }
 
 .song-container:hover > .play-button-container {
     display: block;
     position: absolute;
     top: 50px;
-    left: 60px;
-     
+    left: 60px;  
 }
 
 .song-container {
