@@ -25,7 +25,7 @@ export const createSong = (formData) => {
 
 export const updateSong = (currentSong, updateSong) => {
 
-    debugger
+    
     return $.ajax({
         method: 'PATCH',
         url: `/api/songs/${currentSong.id}`,

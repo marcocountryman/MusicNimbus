@@ -14,12 +14,13 @@ class SongShow extends React.Component {
     componentDidMount() {
        this.props.fetchSong(this.props.match.params.id);
        this.props.fetchAllSongs();
+    //    debugger
     }
 
     render() {
 
         if (!this.props.song) return null;
-        debugger
+
         const relatedGenre = this.props.songs.filter(song => song.genre === this.props.song.genre && song.id !== this.props.song.id);
         shuffle(relatedGenre)
         const genreItems = relatedGenre.slice(0,3);
@@ -72,7 +73,20 @@ class SongShow extends React.Component {
 
                                 <div className = 'show-page-bottom'>
                                     <div className = 'show-page-left'>
-                                            COMMENTS
+                                            <div className = "show-page-comment-container">
+                                                    <Link to = {`users/${this.props.song.uploader_id}`}>
+                                                        <img src = {this.props.song.profilePic}  alt="profile-pic" className='song-profile-pic'/>
+                                                    </Link>
+                                                    
+                                                   <div className =  "placeholder">
+                                                        <img src="https://music-nimbus-seeds.s3.amazonaws.com/comment_holder.jpg" alt="construction" className = "placeholder-pic"/>
+                                                        <h3 className = "placeholder-message">Seems a little quite over here.</h3>
+                                                   
+                                                   </div>
+                                                    
+                                                    
+                                                    
+                                            </div>
                                     </div>
 
                                     <div className = 'show-page-right'>
