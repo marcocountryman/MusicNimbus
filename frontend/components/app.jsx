@@ -8,7 +8,7 @@ import UserShowContainer from './user/user_container';
 import UploadFormContainer from './upload/upload_form_container';
 import SongShowContainer from './songs/song_show_container';
 import SongPlayerContainer from './song_player/song_player_container';
-
+import NavBarContainer from './navbar/nav_bar_container';
 //PENDING DELETION
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
@@ -18,7 +18,9 @@ const App = () => {
     return (
         <div className = "app">
             <Modal/>
+            
             <ProtectedRoute path = "/" component={SongPlayerContainer} />
+            <ProtectedRoute path = "/" component = {NavBarContainer} />
             
             <Switch>
 
@@ -27,7 +29,7 @@ const App = () => {
                 <AuthRoute exact path= "/" component={Splash}/>
                 <ProtectedRoute path="/discover" component={Discover} />
                 <ProtectedRoute path="/upload" component={UploadFormContainer} />
-                <ProtectedRoute path="/users/:id" component={UserShowContainer} />
+                <ProtectedRoute path="/users/:userId" component={UserShowContainer} />
                 <ProtectedRoute path="/songs/:id" component={SongShowContainer} />
                 
             </Switch> 

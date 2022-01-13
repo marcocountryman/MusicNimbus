@@ -8,11 +8,20 @@ class UserShow extends React.Component {
         super(props)
     }
 
+    componentDidMount() {
+        this.props.fetchUser(this.props.match.params.userId);
+        // debugger
+    }
+
     render() {
 
         return (
             <div>
-                <NavBarContainer/>
+                {/* <NavBarContainer/> */}
+
+                <div>
+                    HELLO FROM USER 1
+                </div>
                 {/* <SongPlayerContainer/> */}
             </div>
         )

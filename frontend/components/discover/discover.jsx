@@ -7,7 +7,7 @@ const Discover = () => {
 
     return (
          <div className = "discover-container">
-                <NavBarContainer/>
+                {/* <NavBarContainer/> */}
                 <DiscoverBodyContainer/>
                 {/* <SongPlayerContainer/> */}
         </div>

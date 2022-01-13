@@ -93,7 +93,7 @@ class UploadForm extends React.Component {
 
         return (
             <div>
-                <NavBarContainer/>
+                {/* <NavBarContainer/> */}
                 <div className = 'upload-container'>
                     <div className = 'upload-form-container'>
                         <div className = "upload-top">

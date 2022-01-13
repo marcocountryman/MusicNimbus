@@ -9,6 +9,8 @@ class SongShow extends React.Component {
 
     constructor(props) {
         super(props)
+
+        // this.sendToUser = this.sendToUser.bind(this);
     }
 
     componentDidMount() {
@@ -16,6 +18,10 @@ class SongShow extends React.Component {
        this.props.fetchAllSongs();
     //    debugger
     }
+
+    // sendToUser() {
+    //     this.props.history.push(`/users/${this.props.song.uploader.id}`)
+    // }
 
     render() {
 
@@ -39,9 +45,10 @@ class SongShow extends React.Component {
                 </li>
             )
         })
+
         return (
             <div>
-                <NavBarContainer/>
+                {/* <NavBarContainer/> */}
 
                 <div className ='show-page-container'>
                         
@@ -74,10 +81,14 @@ class SongShow extends React.Component {
                                 <div className = 'show-page-bottom'>
                                     <div className = 'show-page-left'>
                                             <div className = "show-page-comment-container">
-                                                    <Link to = {`users/${this.props.song.uploader_id}`}>
-                                                        <img src = {this.props.song.profilePic}  alt="profile-pic" className='song-profile-pic'/>
-                                                    </Link>
-                                                    
+                                                    <div className = "user-info-show">
+                                                        <Link to = {`/users/${this.props.song.uploader_id}`}>
+                                                            <img src = {this.props.song.profilePic}  alt="profile-pic" className='song-profile-pic'/>
+                                                        </Link>
+                                                            <span className = "user-name-show">{this.props.song.uploader.displayname}</span>
+                                                    </div>
+                                                
+                                                            
                                                    <div className =  "placeholder">
                                                         <img src="https://music-nimbus-seeds.s3.amazonaws.com/comment_holder.jpg" alt="construction" className = "placeholder-pic"/>
                                                         <h3 className = "placeholder-message">Seems a little quite over here.</h3>

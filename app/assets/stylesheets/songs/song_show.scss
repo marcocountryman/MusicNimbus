@@ -163,7 +163,7 @@
 }
 
 .song-profile-pic{
-    padding-top: 20px;
+    // padding-top: 20px;
     height: 150px;
     width: 150px;
     border-radius: 50%;
@@ -186,8 +186,8 @@
 }
 
 .placeholder-pic {
-    height: 250px;
-    width: 600px;
+    height: 200px;
+    width: 400px;
 }
 
 .placeholder-message {
@@ -196,3 +196,17 @@
     font-weight: 100px;
 }
 
+.user-info-show {
+    // border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-name-show {
+    padding-top: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+}
