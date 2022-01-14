@@ -9,9 +9,7 @@ import UploadFormContainer from './upload/upload_form_container';
 import SongShowContainer from './songs/song_show_container';
 import SongPlayerContainer from './song_player/song_player_container';
 import NavBarContainer from './navbar/nav_bar_container';
-//PENDING DELETION
-import LoginFormContainer from './session/login_form_container';
-import SignupFormContainer from './session/signup_form_container';
+
 
 const App = () => {
 
@@ -24,8 +22,7 @@ const App = () => {
             
             <Switch>
 
-                {/* <AuthRoute path="/login" component={LoginFormContainer} />
-                <AuthRoute path="/signup" component={SignupFormContainer} /> */}
+           
                 <AuthRoute exact path= "/" component={Splash}/>
                 <ProtectedRoute path="/discover" component={Discover} />
                 <ProtectedRoute path="/upload" component={UploadFormContainer} />
