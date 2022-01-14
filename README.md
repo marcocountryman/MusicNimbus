@@ -37,7 +37,7 @@
   <img src = "docs/production2.jpg" >
  </p>
 
-<p> Initially, there were some issues when I first implemented the SongPlayer Component. My initial approach was to import the SongPlayer in every component that a logged in user has access to. This apprach was a bit erroneous. The constant rerendering of the SongPlayer caused the unwanted side effect of stopping the music whenver a user navigated to a new section of the page. The solution to this dilemma was to have the SongPlayer Component live as a protected route that lives at the very top level of the application.</p>
+<p> Initially, there were some issues when I first implemented the SongPlayer Component. My initial approach was to import the SongPlayer in every component that a logged in user has access to. This apprach was a bit erroneous. The constant rerendering of the SongPlayer caused the unwanted side effect of stopping the music whenever a user navigated to a new section of the page. The solution to this dilemma was to have the SongPlayer Component live as a protected route that lives at the very top level of the application.</p>
 
 
 ## Related Code to Play <a name="playcode"></a>
