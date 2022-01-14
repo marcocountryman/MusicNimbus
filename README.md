@@ -1,4 +1,4 @@
-<h1 align = "center">Music</h1>
+<h1 align = "center">Music Nimbus</h1>
 <p align = "center">
 <img src = "app/assets/images/sound_cloud_favicon.jpg" >
  </p>
