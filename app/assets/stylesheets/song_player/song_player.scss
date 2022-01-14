@@ -14,20 +14,12 @@
 .play-control {
     background-color: #ff004f;
     color: white;
-    // border-radius: 50%;
     font-size: 24px;
     height: 50px;
     width: 50px;
-    // border: 2px solid gold;
-    // visibility: hidden;
-    // overflow: hidden;
-    // position: relative;
-    // opacity: 0;
-    // z-index: 1;
 }
 
 .play-container {
-    // border: 2px solid hotpink;
     width: 90px;
     height: 90px;
     border-radius: 50%;
@@ -50,7 +42,6 @@
 .song-player-right {
     display: flex;
     justify-content: space-around;
-    // border: 2px solid gold;
     width: 20%;
     padding-right: 100px;
     padding-top: 5px;
@@ -81,7 +72,6 @@
 }
 
 .song-player-links {
-    // border: 2px solid black;
     width: 20%;
     display: flex;
     justify-content: space-between;
@@ -96,7 +86,6 @@
 }
 
 .song-player-left {
-    // border: 2px solid gold;
     width: 10%;
     display: flex;
     justify-content: space-between;
@@ -124,7 +113,6 @@
 }
 
 .song-player-middle {
-    // border: 2px solid black;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -132,13 +120,11 @@
 }
 
 .duration {
-    // border: 2px solid gold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 12px;
 }
 
 .time-now {
-    // border: 2px solid red;
     color: #ff004f;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 12px;

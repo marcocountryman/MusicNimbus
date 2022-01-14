@@ -159,11 +159,9 @@
 .show-page-left {
     width: 75%;
     background-color: white;
-    // border: 2px solid gold;
 }
 
 .song-profile-pic{
-    // padding-top: 20px;
     height: 150px;
     width: 150px;
     border-radius: 50%;
@@ -172,13 +170,10 @@
 .show-page-comment-container {
     display: flex;
     justify-content: space-around;
-    // padding-top: 50px;
-    // border: 2px solid black;
     height: 300px;
 }
 
 .placeholder {
-    // border: 2px solid green;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -200,7 +195,6 @@
 }
 
 .user-info-show {
-    // border: 2px solid green;
     display: flex;
     flex-direction: column;
     align-items: center;
