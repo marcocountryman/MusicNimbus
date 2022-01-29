@@ -13,6 +13,12 @@ class Song < ApplicationRecord
     foreign_key: :uploader_id,
     class_name: :User
 
+    has_many :comments,
+    primary_key: :id,
+    foreign_key: :commenter_id,
+    class_name: :Comment,
+    dependent: :destroy
+
     # def ensure_image
     #     unless self.image_file.attached?
     #         errors[:image_file] << "must have image file"
