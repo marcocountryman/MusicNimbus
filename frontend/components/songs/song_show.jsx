@@ -1,9 +1,8 @@
 import React from 'react'
-import NavBarContainer from '../navbar/nav_bar_container';
 import { Link } from 'react-router-dom';
 import { shuffle } from '../../util/misc_util';
-import SongPlayerContainer from '../song_player/song_player_container';
 import PlayButtonContainer from '../play_button/play_button_container';
+import CommentFormContainer from '../comments/comment_form_container';
 
 class SongShow extends React.Component {
 
@@ -71,6 +70,7 @@ class SongShow extends React.Component {
                                 <div className = 'show-page-bottom'>
                                     <div className = 'show-page-left'>
                                             <div className = "show-page-comment-container">
+                                                <CommentFormContainer/>
                                                     {/* <div className = "user-info-show">
                                                         <Link to = {`/users/${this.props.song.uploader_id}`}>
                                                             <img src = {this.props.song.profilePic}  alt="profile-pic" className='song-profile-pic'/>

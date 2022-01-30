@@ -1,0 +1,49 @@
+.show-page-comment-container {
+    // border: 2px solid gold;
+    display: flex;
+    justify-content: center;
+}
+
+.comment-img {
+    height: 40px;
+    width: 40px;
+}
+
+.comment-form-container {
+    display: flex;
+    // border: 2px solid black;
+    flex-direction: column;
+    width: 90%;
+}
+
+.comment-form {
+    // border: 2px solid silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: lightgray;
+}
+
+.comment-input-area{
+    // border: 2px solid green;
+    width: 95%;
+}
+
+.comment-section {
+    display: flex;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.comment-button {
+    width: 11%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+.comment-button:hover {
+    border: 1px solid black;
+}
