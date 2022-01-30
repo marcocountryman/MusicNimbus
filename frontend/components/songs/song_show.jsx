@@ -71,7 +71,7 @@ class SongShow extends React.Component {
                                 <div className = 'show-page-bottom'>
                                     <div className = 'show-page-left'>
                                             <div className = "show-page-comment-container">
-                                                    <div className = "user-info-show">
+                                                    {/* <div className = "user-info-show">
                                                         <Link to = {`/users/${this.props.song.uploader_id}`}>
                                                             <img src = {this.props.song.profilePic}  alt="profile-pic" className='song-profile-pic'/>
                                                         </Link>
@@ -83,7 +83,7 @@ class SongShow extends React.Component {
                                                         <img src="https://music-nimbus-seeds.s3.amazonaws.com/comment_holder.jpg" alt="construction" className = "placeholder-pic"/>
                                                         <h3 className = "placeholder-message">Seems a little quite over here.</h3>
                                                    
-                                                   </div>       
+                                                   </div>        */}
                                             </div>
                                     </div>
 
