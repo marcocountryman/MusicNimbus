@@ -21,7 +21,8 @@ class SplashBody extends React.Component {
         const renderSongs = songItems.map((song, idx) => {
             return (
                 <li key = {`song-${idx}`}className="song-item"  >
-                    <img src= {song.imageUrl} alt="song" />
+                    {/* <img src= {song.imageUrl} alt="song" /> */}
+                    <img src={window.nimbuslogo} alt="temp"/>
                     <label className = "song-title">{song.title}</label>
                     <label className = "artist-name">{song.artist}</label>
                 </li >

@@ -2,7 +2,7 @@ class Api::CommentsController < ApplicationController
 
     def create
         @comment = Comment.new(comment_params)
-
+        
         if @comment.save
             render :show
         else
@@ -11,7 +11,7 @@ class Api::CommentsController < ApplicationController
     end
 
     def destroy
-        @comment.find_by(id: params[:id])
+        @comment = Comment.find_by(id: params[:id])
         @comment.destroy
         render json: {}
     end
