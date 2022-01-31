@@ -1,4 +1,6 @@
-json.extract! song, :id, :title, :artist, :uploader_id, :genre, :uploader
+json.extract! song, :id, :title, :artist, :uploader_id, :genre, :uploader, :comments
+
+# json.comments song.comments.pluck(:id)
 
 if song.image_file.attached?
     json.set! "imageUrl", url_for(song.image_file)

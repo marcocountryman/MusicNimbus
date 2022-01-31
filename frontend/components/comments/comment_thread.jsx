@@ -2,11 +2,26 @@ import React from 'react';
 
 class CommentThread extends React.Component {
 
+    componentDidUpdate(prevProps) {
+        if (prevProps) {
+            if (prevProps)
+        }
+    }
+
     render() {
-        debugger
+        let commentThread = this.props.comments.length < 1 ? 
+        <p>Nothing to See Here</p> :
+        this.props.comments.map( (comment, idx) => {
+            return (
+                <li>{comment.body}</li>
+            )
+
+        })
         return (
             <div>
-                Beginning of thread
+                <ul>
+                    {commentThread}
+                </ul>
             </div>
         )
     }

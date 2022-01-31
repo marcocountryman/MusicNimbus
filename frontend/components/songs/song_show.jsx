@@ -13,7 +13,7 @@ class SongShow extends React.Component {
 
     componentDidMount() {
        this.props.fetchSong(this.props.match.params.id);
-    //    this.props.fetchAllSongs();
+       this.props.fetchAllSongs();
     }
 
     render() {
@@ -98,7 +98,7 @@ class SongShow extends React.Component {
                                                 <p className = "related-label">Related Songs</p>
                                             </div>
                                             <ul className = 'related-genre-list'>
-                                                {/* {renderGenreItems} */}
+                                                {renderGenreItems}
                                             </ul>
 
                                             <div className = "sidebar-links">

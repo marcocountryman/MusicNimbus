@@ -16,7 +16,7 @@ const commentsReducer = (state = {}, action) => {
             return nextState;
 
         case RECEIVE_SONG:
-            return Object.assign({}, action.song.comments)
+            return Object.assign({}, action.song.song.comments)
         
         default:
             return state;
