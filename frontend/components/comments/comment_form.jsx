@@ -49,11 +49,13 @@ class CommentForm extends React.Component {
                         />
                     </form>
                 </div>
-
-                <button onClick = {this.handleSubmit} className = "comment-button">
-                    Comment
-                    <FaRegComment/>
+                <div className = "comment-button-container">
+                     <button onClick = {this.handleSubmit} className = "comment-button">
+                        Comment
+                        <FaRegComment/>
                     </button>
+                </div>
+                
             </div>
         )
     }
