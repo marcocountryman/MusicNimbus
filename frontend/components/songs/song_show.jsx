@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { shuffle } from '../../util/misc_util';
 import PlayButtonContainer from '../play_button/play_button_container';
 import CommentFormContainer from '../comments/comment_form_container';
+import CommentThreadContainer from '../comments/comment_thread_container';
 
 class SongShow extends React.Component {
 
@@ -12,7 +13,7 @@ class SongShow extends React.Component {
 
     componentDidMount() {
        this.props.fetchSong(this.props.match.params.id);
-       this.props.fetchAllSongs();
+    //    this.props.fetchAllSongs();
     }
 
     render() {
@@ -71,6 +72,10 @@ class SongShow extends React.Component {
                                     <div className = 'show-page-left'>
                                             <div className = "show-page-comment-container">
                                                 <CommentFormContainer/>
+
+
+
+                                                <CommentThreadContainer/>
                                                     {/* <div className = "user-info-show">
                                                         <Link to = {`/users/${this.props.song.uploader_id}`}>
                                                             <img src = {this.props.song.profilePic}  alt="profile-pic" className='song-profile-pic'/>
@@ -93,7 +98,7 @@ class SongShow extends React.Component {
                                                 <p className = "related-label">Related Songs</p>
                                             </div>
                                             <ul className = 'related-genre-list'>
-                                                {renderGenreItems}
+                                                {/* {renderGenreItems} */}
                                             </ul>
 
                                             <div className = "sidebar-links">

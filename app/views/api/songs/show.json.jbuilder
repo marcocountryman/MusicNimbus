@@ -16,7 +16,7 @@ json.users do
         json.partial! "api/users/user", user: @song.uploader
     end
 
-    @track.comments.each do |comment|
+    @song.comments.each do |comment|
         json.set! comment.commenter_id do
             json.partial! "api/users/user", user: User.find_by(id: comment.commenter_id)
         end
