@@ -31,7 +31,7 @@ class CommentForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createComment(this.state).then(this.clear())
+        this.props.createComment(this.state).then(this.clear()).then(() => window.location.reload())
     }
 
     render() {
