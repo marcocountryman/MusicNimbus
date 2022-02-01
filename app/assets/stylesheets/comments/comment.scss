@@ -59,8 +59,8 @@
 }
 
 .comment-uploader-pic {
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
 }
 
@@ -75,4 +75,23 @@
 .song-uploader-info {
     display: flex;
     flex-direction: column;
+}
+
+.commenter-photo{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.comment-item {
+    border: 2px solid gold;
+}
+
+.comment-list {
+    border: 2px solid black;
+}
+
+.comment-list-container {
+    border: 2px solid blue;
+    width: 85%;
 }

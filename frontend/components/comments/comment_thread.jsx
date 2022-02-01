@@ -16,8 +16,8 @@ class CommentThread extends React.Component {
             <button>Delete</button> : null
 
             return (
-                <li key = {`comment-${idx}`}>
-                    <img src= {comment.commenter.profilePic} alt="profile-pic" />
+                <li key = {`comment-${idx}`} className = "comment-item">
+                    <img src= {comment.commenter.profilePic} alt="profile-pic" className = "commenter-photo"/>
                     <span>{comment.commenter.displayname}</span>
                     <span>{comment.body}</span>
                     <span>{comment.posted}</span>
@@ -40,9 +40,9 @@ class CommentThread extends React.Component {
                     <img src= {this.props.song.uploader.profilePic} alt= "uploader-pic" className = "comment-uploader-pic"/>
                     <span>{this.props.song.uploader.displayname}</span>
                 </div>
-                <div>
+                <div className = "comment-list-container">
                     {commentCount}
-                    <ul>
+                    <ul className = "comment-list">
                         {commentThread}
                     </ul>
                 </div>
