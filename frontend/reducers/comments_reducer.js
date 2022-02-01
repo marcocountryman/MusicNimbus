@@ -8,15 +8,18 @@ const commentsReducer = (state = {}, action) => {
 
     switch(action.type) {
         case RECEIVE_COMMENT:
-            nextState[action.comment.id] = action.comment;
+            // return Object.assign({}, action.song.comments)
+            nextState[action.comment.comment.id] = action.comment;
+            // debugger
             return nextState;
 
         case REMOVE_COMMENT:
-            delete nextState[action.commendId];
+            delete nextState[action.commentId];
             return nextState;
 
         case RECEIVE_SONG:
-            return Object.assign({}, action.song.song.comments)
+
+            return Object.assign({}, action.song.comments)
         
         default:
             return state;

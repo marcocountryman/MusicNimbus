@@ -13,7 +13,7 @@ class SongShow extends React.Component {
 
     componentDidMount() {
        this.props.fetchSong(this.props.match.params.id);
-       this.props.fetchAllSongs();
+    //    this.props.fetchAllSongs();
     }
 
     render() {
@@ -71,24 +71,10 @@ class SongShow extends React.Component {
                                 <div className = 'show-page-bottom'>
                                     <div className = 'show-page-left'>
                                             <div className = "show-page-comment-container">
-                                                <CommentFormContainer/>
-
-
-
-                                                <CommentThreadContainer/>
-                                                    {/* <div className = "user-info-show">
-                                                        <Link to = {`/users/${this.props.song.uploader_id}`}>
-                                                            <img src = {this.props.song.profilePic}  alt="profile-pic" className='song-profile-pic'/>
-                                                        </Link>
-                                                            <span className = "user-name-show">{this.props.song.uploader.displayname}</span>
-                                                    </div>
                                                 
-                                                            
-                                                   <div className =  "placeholder">
-                                                        <img src="https://music-nimbus-seeds.s3.amazonaws.com/comment_holder.jpg" alt="construction" className = "placeholder-pic"/>
-                                                        <h3 className = "placeholder-message">Seems a little quite over here.</h3>
+                                                <CommentFormContainer/>
+                                                <CommentThreadContainer song = {this.props.song}/>
                                                    
-                                                   </div>        */}
                                             </div>
                                     </div>
 
@@ -98,7 +84,7 @@ class SongShow extends React.Component {
                                                 <p className = "related-label">Related Songs</p>
                                             </div>
                                             <ul className = 'related-genre-list'>
-                                                {renderGenreItems}
+                                                {/* {renderGenreItems} */}
                                             </ul>
 
                                             <div className = "sidebar-links">

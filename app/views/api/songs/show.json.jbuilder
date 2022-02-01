@@ -1,6 +1,5 @@
-json.song do
-    json.partial! "song", song: @song
-end
+json.partial! "song", song: @song
+
 
 # json.comments do
 #     @song.comments.each do |comment|
