@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaRegComment } from 'react-icons/fa';
+
 class CommentForm extends React.Component {
     constructor(props) {
         super(props);

@@ -71,24 +71,10 @@ class SongShow extends React.Component {
                                 <div className = 'show-page-bottom'>
                                     <div className = 'show-page-left'>
                                             <div className = "show-page-comment-container">
-                                                <CommentFormContainer/>
-
-
-
-                                                <CommentThreadContainer/>
-                                                    {/* <div className = "user-info-show">
-                                                        <Link to = {`/users/${this.props.song.uploader_id}`}>
-                                                            <img src = {this.props.song.profilePic}  alt="profile-pic" className='song-profile-pic'/>
-                                                        </Link>
-                                                            <span className = "user-name-show">{this.props.song.uploader.displayname}</span>
-                                                    </div>
                                                 
-                                                            
-                                                   <div className =  "placeholder">
-                                                        <img src="https://music-nimbus-seeds.s3.amazonaws.com/comment_holder.jpg" alt="construction" className = "placeholder-pic"/>
-                                                        <h3 className = "placeholder-message">Seems a little quite over here.</h3>
+                                                <CommentFormContainer/>
+                                                <CommentThreadContainer song = {this.props.song}/>
                                                    
-                                                   </div>        */}
                                             </div>
                                     </div>
 
