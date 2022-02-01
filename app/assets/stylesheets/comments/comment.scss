@@ -14,13 +14,11 @@
 
 .comment-form-container {
     display: flex;
-    // border: 2px solid black;
     flex-direction: column;
     width: 90%;
 }
 
 .comment-form {
-    // border: 2px solid silver;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +27,6 @@
 }
 
 .comment-input-area{
-    // border: 2px solid green;
     width: 97%;
 }
 
@@ -65,7 +62,6 @@
 .comment-thread-container {
     display: flex;
     justify-content: space-between;
-    // border: 2px solid gold;
     width: 90%;
     padding-top: 10px;
 }
@@ -82,7 +78,6 @@
 }
 
 .comment-item {
-    // border: 2px solid gold;
     display: flex;
     justify-content: space-between;
     padding-top: 10px;
@@ -90,18 +85,12 @@
     border-top: 1px solid lightgrey;
 }
 
-.comment-list {
-    // border: 2px solid black;
-}
-
 .comment-list-container {
-    // border: 2px solid blue;
     width: 85%;
     padding-top: 15px;
 }
 
 .comment-number{
-    // border: 2px solid red;
     width: 15%;
     display: flex;
     justify-content: space-between;
@@ -139,9 +128,33 @@
 .comment-item-right {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .comment-posted {
     color: #999999;
     font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.delete-comment {
+    border: 1 px solid black;
+}
+
+.delete-container{
+    border: 1px solid black;
+    font-size: 14px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 20px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.comment-item:hover .delete-container {
+    visibility: visible;
 }

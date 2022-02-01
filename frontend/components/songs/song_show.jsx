@@ -81,7 +81,7 @@ class SongShow extends React.Component {
                                     <div className = 'show-page-right'>
                                             
                                             <div className = "show-label">
-                                                <p className = "related-label">Related Songs</p>
+                                                {/* <p className = "related-label">Related Songs</p> */}
                                             </div>
                                             <ul className = 'related-genre-list'>
                                                 {/* {renderGenreItems} */}

@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaRegComment } from 'react-icons/fa';
+import { FaRegComment, FaTrash } from 'react-icons/fa';
+
 class CommentThread extends React.Component {
 
     constructor(props) {
@@ -9,18 +10,17 @@ class CommentThread extends React.Component {
   
     
     render() {
-        // if (!this.props.comments.length) return null;
-        const { deleteComment } = this.props
+        const { deleteComment } = this.props;
+        
         let commentThread = this.props.comments.length < 1 ? 
         <p>Nothing to See Here</p> :
         this.props.comments.map( (comment, idx) => {
 
             let deleteButton = comment.commenter.id === this.props.currentUser.id ?
-
-            <button onClick = {() => deleteComment(comment.id)}>Delete</button> : null;
+            <div className  = "delete-container">
+                <FaTrash onClick = {() => deleteComment(comment.id)} className = "delete-comment"/> 
+            </div> : null;
             
-            // let postedTime = comment.posted.split(" ").slice(1).join(" ") + " ago";
-
             return (
                 <li key = {`comment-${idx}`} className = "comment-item">        
                     <div className = "comment-item-left">
