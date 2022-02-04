@@ -58,6 +58,7 @@
 .user-bottom {
     background-color: white;
     width: 1247px;
+    padding-bottom: 50px;
 }
 
 .user-song-top {
@@ -82,6 +83,7 @@
     border-bottom: 1px solid lightgray;
     padding-top: 15px;
     padding-left: 15px;
+    position: relative;
 }
 
 .user-song-list-item:hover {
@@ -116,4 +118,25 @@
 .song-list-image {
     width: 75px;
     height: 75px;
+}
+
+.user-show-play-button {
+    width: 50px;
+    height: 50px;
+}
+
+.user-song-list-item > .user-show-play-button {
+    display: none;
+}
+
+.user-song-list-item:hover > .user-show-play-button {
+    display: block;
+    position: absolute;
+    top: 28px;
+    left: 28px;
+}
+
+.user-show-play-button > .play-container {
+    height: 50px;
+    width: 50px;
 }

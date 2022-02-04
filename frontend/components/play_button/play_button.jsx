@@ -7,7 +7,7 @@ const PlayButton = (props) => {
     let playControl = null;
     
     if (!props.currentSong) {
-        playControl =   <div className = "play-container" 
+        playControl =   <div className = "play-container" id = "play"
         onClick = {() => {props.receivePlaySong(props.song)}}>
                             <FontAwesomeIcon icon = {faPlay} className = "play-control" />
                         </div>

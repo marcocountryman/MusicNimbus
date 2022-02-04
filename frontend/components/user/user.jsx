@@ -1,4 +1,5 @@
 import React from 'react';
+import PlayButtonContainer from '../play_button/play_button_container';
 
 class UserShow extends React.Component {
 
@@ -25,6 +26,10 @@ class UserShow extends React.Component {
                         <span className = "song-list-artist">{song.artist}</span>
                         <span>-</span>
                         <span className = "song-list-title">{song.title}</span>
+                    </div>
+
+                    <div className = "user-show-play-button">
+                        <PlayButtonContainer song = {song}/>
                     </div>
                 </li>
             )
