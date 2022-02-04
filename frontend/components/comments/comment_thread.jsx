@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaRegComment, FaTrash } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 class CommentThread extends React.Component {
 
@@ -7,8 +8,6 @@ class CommentThread extends React.Component {
         super(props);
     }
 
-  
-    
     render() {
         const { deleteComment } = this.props;
         
@@ -24,7 +23,10 @@ class CommentThread extends React.Component {
             return (
                 <li key = {`comment-${idx}`} className = "comment-item">        
                     <div className = "comment-item-left">
-                        <img src= {comment.commenter.profilePic} alt="profile-pic" className = "commenter-photo"/>
+                        <Link to = {`/users/${comment.commenter.id}`}>
+                            <img src= {comment.commenter.profilePic} alt="profile-pic" className = "commenter-photo"/>
+                        </Link>
+
                         <div className = "commenter-info">
                             <span className = "comment-commenter">{comment.commenter.displayname}</span>
                             <span className = "comment-body">{comment.body}</span>
@@ -51,7 +53,9 @@ class CommentThread extends React.Component {
         return (
             <div className = "comment-thread-container">
                 <div className = "song-uploader-info">
-                    <img src= {this.props.song.uploader.profilePic} alt= "uploader-pic" className = "comment-uploader-pic"/>
+                    <Link to = {`/users/${this.props.song.uploader.id}`}>
+                        <img src= {this.props.song.uploader.profilePic} alt= "uploader-pic" className = "comment-uploader-pic"/>
+                    </Link>
                     <span>{this.props.song.uploader.displayname}</span>
                 </div>
                 <div className = "comment-list-container">

@@ -27,7 +27,7 @@ class NavBar extends React.Component {
                         <Link to = "/upload" className = "nav-upload">Upload</Link>
                         <div className = "nav-user-info">
                             <i className='fas fa-user-astronaut'></i>
-                            <Link to = {`users/${this.props.currentUser.id}`}className = "nav-displayname">
+                            <Link to = {`/users/${this.props.currentUser.id}`}className = "nav-displayname">
                                 {this.props.currentUser.displayname}
                             </Link>
                         </div>
