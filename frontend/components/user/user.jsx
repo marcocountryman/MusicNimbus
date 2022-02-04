@@ -23,7 +23,10 @@ class UserShow extends React.Component {
 
                         <div className = "user-top-left">
                             <img src= {this.props.user.defaultPhoto} alt= "default-pic" className='user-pic'/>
-                            <span className = "profile-username">{this.props.user.displayname}</span>
+                            
+                            <div className = "profile-username-container">
+                                <span className = "profile-username">{this.props.user.displayname}</span>
+                            </div>
                         </div>
 
                     </div>
@@ -31,7 +34,13 @@ class UserShow extends React.Component {
                 </div>
 
                 <div className = "user-bottom">
-                    SONGS
+                    <div className = "user-song-top">
+                            <span className = "uploaded-songs">Uploaded Songs</span>
+                    </div>
+
+                    <div className = "user-songs">
+                            user 
+                    </div>
                 </div>
             </div>
         )
