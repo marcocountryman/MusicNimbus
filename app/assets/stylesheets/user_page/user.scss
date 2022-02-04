@@ -52,7 +52,6 @@
 
 .profile-username-container {
     padding-left: 10px;
-    // border: 2px solid green;
     width: 50%;
 }
 
@@ -76,4 +75,45 @@
 .uploaded-songs:hover {
     text-decoration: underline;
     text-decoration-color: #ff004f;
+}
+
+.user-song-list-item {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.user-song-list-item:hover {
+    background-color: lightgray;
+}
+
+.song-list-item-info {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    justify-content: space-evenly;
+}
+
+.song-list-artist {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #999;
+}
+
+.song-number {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #999;
+}
+
+.song-list-title {
+    padding-left: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.song-list-image {
+    width: 75px;
+    height: 75px;
 }
