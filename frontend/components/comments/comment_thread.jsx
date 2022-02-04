@@ -7,7 +7,11 @@ class CommentThread extends React.Component {
     constructor(props) {
         super(props);
     }
+<<<<<<< HEAD
+  
+=======
 
+>>>>>>> main
     render() {
         const { deleteComment } = this.props;
         
