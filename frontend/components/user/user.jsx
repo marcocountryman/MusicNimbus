@@ -1,5 +1,6 @@
 import React from 'react';
 import PlayButtonContainer from '../play_button/play_button_container';
+import { Link } from 'react-router-dom';
 
 class UserShow extends React.Component {
 
@@ -19,7 +20,7 @@ class UserShow extends React.Component {
         const songItems = userSongs.map((song,idx) => {
         let num = idx + 1;
             return (
-                <li className = "user-song-list-item">
+                <li className = "user-song-list-item" key = {`song-${idx}`}>
                     <img src= {song.imageUrl} alt="song-photo" className = "song-list-image"/>
                     <Link to = {`/songs/${song.id}`}>
                         <div className = "song-list-item-info">
@@ -64,6 +65,10 @@ class UserShow extends React.Component {
                         <ul className = "user-song-list">
                             {songItems}
                         </ul>
+
+                        <div className = "user-right-content">
+                            Right
+                        </div>
                     </div>
                 </div>
             </div>
