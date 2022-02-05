@@ -219,7 +219,7 @@ class DiscoverBody extends React.Component {
                         <div>
                             <span className = "suggested-message">Suggestions from Nimbus Mixer</span>
                             <ul className = "suggested-song-list">
-                                {/* {this.suggestionList()} */}
+                                {this.suggestionList()}
                             </ul>
                         </div>
                             

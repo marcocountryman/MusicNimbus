@@ -19,7 +19,7 @@
 
 .discover-songs {
     width: 75%;
-    border-right: 1px solid #999999;
+    border-right: 1px solid lightgray;;
     padding-right: 10px;
     padding-top: 20px;
     z-index: 0;
@@ -75,8 +75,8 @@
 }
 
 .sidebar-song {
-    border-top: 1px solid #999999;
-    border-bottom: 1px solid #999999;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
     display: flex;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -94,19 +94,18 @@
     display: flex;
     justify-content: space-evenly;
     padding-top: 15px;
-    border-bottom: 1px solid #999999;
+    border-bottom: 1px solid lightgray;
     padding-bottom: 15px;
 }
 
 .outside-link {
     background-color: black;
     color: white;
-    border-radius: 10%;
+    border-radius: 8px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
     text-decoration: none;
     border: none;
-    border-radius: 10%;
     height: 40px;
     width: 100px;
 }
@@ -147,8 +146,8 @@
 
 .suggested-song-list {
     padding-top: 15px;
-    border-top: 1px solid #999999;
-    border-bottom: 1px solid #999999;
+    border-top: 1px solid lightgray;;
+    border-bottom: 1px solid lightgray;;
 }
 
 .suggested-image {
@@ -215,5 +214,5 @@ a .suggested-title {
 .genre-content {
     display: flex;
     overflow-x: scroll;
-    border-bottom: 1px solid #999999;
+    border-bottom: 1px solid lightgray;;
 }

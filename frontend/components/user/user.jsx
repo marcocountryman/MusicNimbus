@@ -67,7 +67,32 @@ class UserShow extends React.Component {
                         </ul>
 
                         <div className = "user-right-content">
-                            Right
+                            <div>
+                                songs
+                            </div>
+                            <div>
+                                comments
+                            </div>
+                            <div>
+                                <div className = "sidebar-links">
+                                                <button className = "outside-link"><a href="https://github.com/marcocountryman" className = "link">GitHub</a></button>
+                                                <button className = "outside-link"><a href="https://www.linkedin.com/" className = "link">LinkedIn</a></button>
+                                </div>
+
+                                <div className = "tech-used">
+                                    <ul className = "tech-used-list">
+                                        <li className = "tech-used-item">React</li>
+                                        <li className = "tech-used-item">Redux</li>
+                                        <li className = "tech-used-item">JavaScript</li>
+                                        <li className = "tech-used-item">Ruby</li>
+                                        <li className = "tech-used-item">Rails</li>
+                                        <li className = "tech-used-item">AWS</li>
+                                        <li className = "tech-used-item">CSS</li>
+                                        <li className = "tech-used-item">HTML</li>
+                                    </ul>
+                                    <p className = "sidebar-language">Language: English(UK)</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
