@@ -1,5 +1,5 @@
 import { RECEIVE_SONG } from "../action/song_actions";
-import { RECEIVE_COMMENT, REMOVE_COMMENT } from "../action/comment_actions";
+import { RECEIVE_COMMENT, REMOVE_COMMENT, RECEIVE_ALL_COMMENTS } from "../action/comment_actions";
 
 const commentsReducer = (state = {}, action) => {
 
@@ -8,9 +8,7 @@ const commentsReducer = (state = {}, action) => {
 
     switch(action.type) {
         case RECEIVE_COMMENT:
-            // return Object.assign({}, action.song.comments)
             nextState[action.comment.comment.id] = action.comment;
-            // debugger
             return nextState;
 
         case REMOVE_COMMENT:
@@ -18,9 +16,11 @@ const commentsReducer = (state = {}, action) => {
             return nextState;
 
         case RECEIVE_SONG:
-
             return Object.assign({}, action.song.comments)
         
+        case RECEIVE_ALL_COMMENTS:
+            return action.comments;
+
         default:
             return state;
     };

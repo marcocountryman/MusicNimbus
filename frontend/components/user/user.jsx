@@ -1,6 +1,8 @@
 import React from 'react';
 import PlayButtonContainer from '../play_button/play_button_container';
 import { Link } from 'react-router-dom';
+import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa";
+import { FaTrash } from 'react-icons/fa';
 
 class UserShow extends React.Component {
 
@@ -11,33 +13,59 @@ class UserShow extends React.Component {
     componentDidMount() {
         this.props.fetchUser(this.props.match.params.userId);
         this.props.fetchAllSongs();
+        this.props.fetchAllComments();
     }
 
     render() {
 
         if (!this.props.user) return null;
-        const userSongs = this.props.songs.filter(song => song.uploader_id === this.props.user.id);
+        const currentUserId = this.props.currentUserId;
+        const userSongs = this.props.songs.filter(song => song.uploader_id === this.props.user.id)
+       
         const songItems = userSongs.map((song,idx) => {
-        let num = idx + 1;
+            let num = idx + 1;
+            let deleteButton = song.uploader_id === currentUserId ? 
+            <FaTrash className = "delete-song" onClick = {() => this.props.deleteSong(song.id)}/> : null;
+           
             return (
                 <li className = "user-song-list-item" key = {`song-${idx}`}>
-                    <img src= {song.imageUrl} alt="song-photo" className = "song-list-image"/>
-                    <Link to = {`/songs/${song.id}`}>
-                        <div className = "song-list-item-info">
-                            <span className = "song-number">{num}</span>
-                            <span className = "song-list-artist">{song.artist}</span>
-                            <span>-</span>
-                            <span className = "song-list-title">{song.title}</span>
-                        </div>
-                    </Link>
+                    
+                    <div className = "user-song-list-item-container">
+                        <img src= {song.imageUrl} alt="song-photo" className = "song-list-image"/>
+                        <Link to = {`/songs/${song.id}`}>
+                            <div className = "song-list-item-info">
+                                <span className = "song-number">{num}</span>
+                                <span className = "song-list-artist">{song.artist}</span>
+                                <span>-</span>
+                                <span className = "song-list-title">{song.title}</span>
+                            </div>
+                        </Link>
+
+                      
+                    </div>
+                   
                    
 
                     <div className = "user-show-play-button">
                         <PlayButtonContainer song = {song}/>
                     </div>
+
+                    {deleteButton}
                 </li>
             )
         })
+
+        const userComments = this.props.comments.filter(comment => comment.commenter_id === this.props.user.id).slice(this.props.comments.length - 4);
+        let commentItems = userComments.length > 0 ? userComments.map((comment,idx) => {
+            return (
+                    <li className = "user-comment-list-item" key = {`comment=${idx}`}>
+                        <Link to = {`/songs/${comment.song_id}`}>
+                             <span>"{comment.body}"</span>
+                            <span>{comment.posted} ago</span>
+                        </Link>
+                    </li>  
+            ) 
+        }) : <span className = "no-comment">{this.props.user.displayname} has no comments.</span>
         return (
             <div className = "user-content-container">
                 <div className = "user-top">
@@ -67,16 +95,21 @@ class UserShow extends React.Component {
                         </ul>
 
                         <div className = "user-right-content">
-                            <div>
-                                songs
+                            
+                            <div className = "num-songs-uploaded">
+                                <span className = "uploaded-song-label">Songs</span>
+                                <span className = "uploaded-song-num">{userSongs.length}</span>
                             </div>
-                            <div>
-                                comments
-                            </div>
-                            <div>
+
+                            <span className = "user-comment-label">{this.props.user.displayname}'s Recent Comments</span>
+                            <ul className = "user-comment-list">
+                                {commentItems}
+                            </ul>
+                            <span className = "nimbus-creator">Meet the Creator</span>
+                            <div className = "sidebar-container">
                                 <div className = "sidebar-links">
-                                                <button className = "outside-link"><a href="https://github.com/marcocountryman" className = "link">GitHub</a></button>
-                                                <button className = "outside-link"><a href="https://www.linkedin.com/" className = "link">LinkedIn</a></button>
+                                    <a href="https://github.com/marcocountryman" className = "link" target = "_blank"><button className = "outside-link"><FaGithubAlt/></button></a>
+                                    <a href="https://www.linkedin.com/in/marco-countryman-40492922a/" className = "link" target = "_blank"><button className = "outside-link"><FaLinkedinIn/></button></a>
                                 </div>
 
                                 <div className = "tech-used">
@@ -93,6 +126,7 @@ class UserShow extends React.Component {
                                     <p className = "sidebar-language">Language: English(UK)</p>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

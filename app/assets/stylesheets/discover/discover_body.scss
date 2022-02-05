@@ -76,7 +76,7 @@
 
 .sidebar-song {
     border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
+    // border-bottom: 1px solid lightgray;
     display: flex;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -147,7 +147,7 @@
 .suggested-song-list {
     padding-top: 15px;
     border-top: 1px solid lightgray;;
-    border-bottom: 1px solid lightgray;;
+    // border-bottom: 1px solid lightgray;;
 }
 
 .suggested-image {
@@ -215,4 +215,14 @@ a .suggested-title {
     display: flex;
     overflow-x: scroll;
     border-bottom: 1px solid lightgray;;
+}
+
+.nimbus-creator-discover {
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-bottom: 10px;
+}
+
+.discover-container .sidebar-links {
+    border-top: 1px solid lightgray;
 }

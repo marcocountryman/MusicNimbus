@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PlayButtonContainer from '../play_button/play_button_container';
+import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa";
 
 class DiscoverBody extends React.Component {
     
@@ -222,10 +223,10 @@ class DiscoverBody extends React.Component {
                                 {this.suggestionList()}
                             </ul>
                         </div>
-                            
+                        <span className='nimbus-creator-discover'>Meet the Creator </span>
                         <div className = "sidebar-links">
-                            <button className = "outside-link"><a href="https://github.com/marcocountryman" className = "link">GitHub</a></button>
-                            <button className = "outside-link"><a href="https://www.linkedin.com/" className = "link">LinkedIn</a></button>
+                            <a href="https://github.com/marcocountryman" className = "link" target = "_blank"><button className = "outside-link"><FaGithubAlt/></button></a>
+                            <a href="https://www.linkedin.com/in/marco-countryman-40492922a/" className = "link" target = "_blank"><button className = "outside-link"><FaLinkedinIn/></button></a>
                         </div>
 
                         <div className = "tech-used">
