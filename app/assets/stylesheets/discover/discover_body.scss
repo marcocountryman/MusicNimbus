@@ -199,8 +199,11 @@ a .suggested-title {
     display: block;
     position: absolute;
     top: 50px;
-    left: 60px;  
+    left: 60px;
+    cursor: pointer;  
 }
+
+
 
 .song-container {
     display: flex;

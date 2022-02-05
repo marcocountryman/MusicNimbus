@@ -13,6 +13,7 @@ class CommentThread extends React.Component {
         this.props.fetchAllComments();
     }
     render() {
+        if (!this.props.comments.length) return null;
         const { deleteComment } = this.props;
         const songComments = this.props.comments.filter(comment => comment.song_id === Number(this.props.match.params.id));
         const currentUserId = this.props.currentUser.id;
@@ -68,7 +69,7 @@ class CommentThread extends React.Component {
                     <Link to = {`/users/${this.props.song.uploader.id}`}>
                         <img src= {this.props.song.uploader.profilePic} alt= "uploader-pic" className = "comment-uploader-pic"/>
                     </Link>
-                    <span>{this.props.song.uploader.displayname}</span>
+                    <span className = "uploader-displayname">{this.props.song.uploader.displayname}</span>
                 </div>
                 <div className = "comment-list-container">
                     {commentCount}
