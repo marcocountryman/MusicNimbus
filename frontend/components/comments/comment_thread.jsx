@@ -16,8 +16,9 @@ class CommentThread extends React.Component {
         const songComments = this.props.comments.filter(comment => comment.song_id === Number(this.props.match.params.id));
         const currentUserId = this.props.currentUser.id;
 
-        let commentThread = this.props.comments.length < 1 ? 
-        <p>Nothing to See Here</p> : songComments.map((comment, idx) => {
+        let commentThread = this.props.comments.length > 0  ? 
+        
+        songComments.map((comment, idx) => {
 
             let deleteButton = comment.commenter.id === currentUserId ?
 
@@ -42,11 +43,13 @@ class CommentThread extends React.Component {
        
                     <div className = "comment-item-right">
                         <span className = "comment-posted">{comment.posted}</span>
-                        {deleteButton}
-                    </div>              
+                        <div className = "delete-button-container">
+                            {deleteButton}           
+                        </div>
+                    </div>
                 </li>
-            )
-        })
+            ) 
+        }) :  <p>Nothing to See Here</p>;
 
         let commentCount = songComments.length > 0 ?
             <div className = "comment-number">
