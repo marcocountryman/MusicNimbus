@@ -21,12 +21,15 @@ class UserShow extends React.Component {
             return (
                 <li className = "user-song-list-item">
                     <img src= {song.imageUrl} alt="song-photo" className = "song-list-image"/>
-                    <div className = "song-list-item-info">
-                        <span className = "song-number">{num}</span>
-                        <span className = "song-list-artist">{song.artist}</span>
-                        <span>-</span>
-                        <span className = "song-list-title">{song.title}</span>
-                    </div>
+                    <Link to = {`/songs/${song.id}`}>
+                        <div className = "song-list-item-info">
+                            <span className = "song-number">{num}</span>
+                            <span className = "song-list-artist">{song.artist}</span>
+                            <span>-</span>
+                            <span className = "song-list-title">{song.title}</span>
+                        </div>
+                    </Link>
+                   
 
                     <div className = "user-show-play-button">
                         <PlayButtonContainer song = {song}/>
