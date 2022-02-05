@@ -29,7 +29,7 @@ const receiveAllComments = comments => {
 };
 
 export const createComment = comment => dispatch => {
-
+    
     return CommentApiUtil.createComment(comment)
     .then(comment => dispatch(receiveComment(comment)))
 }

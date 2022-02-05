@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import CommentThread from "./comment_thread";
-import { deleteComment } from "../../action/comment_actions";
+import { deleteComment, fetchAllComments } from "../../action/comment_actions";
+import { withRouter } from "react-router-dom";
 
 
 const mSTP = (state) => {
@@ -14,8 +15,9 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
 
     return {
-        deleteComment: commentId => dispatch(deleteComment(commentId))
+        deleteComment: commentId => dispatch(deleteComment(commentId)),
+        fetchAllComments: () => dispatch(fetchAllComments())
     }
 }
 
-export default connect(mSTP,mDTP)(CommentThread);
+export default withRouter(connect(mSTP,mDTP)(CommentThread));

@@ -76,7 +76,6 @@
 
 .sidebar-song {
     border-top: 1px solid lightgray;
-    // border-bottom: 1px solid lightgray;
     display: flex;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -146,8 +145,7 @@
 
 .suggested-song-list {
     padding-top: 15px;
-    border-top: 1px solid lightgray;;
-    // border-bottom: 1px solid lightgray;;
+    border-top: 1px solid lightgray;
 }
 
 .suggested-image {
@@ -214,7 +212,7 @@ a .suggested-title {
 .genre-content {
     display: flex;
     overflow-x: scroll;
-    border-bottom: 1px solid lightgray;;
+    border-bottom: 1px solid lightgray;
 }
 
 .nimbus-creator-discover {

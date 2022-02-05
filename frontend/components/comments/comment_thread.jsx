@@ -7,19 +7,26 @@ class CommentThread extends React.Component {
     constructor(props) {
         super(props);
     }
+
+    componentDidMount() {
+        this.props.fetchAllComments();
+    }
     render() {
         const { deleteComment } = this.props;
-        
-        let commentThread = this.props.comments.length < 1 ? 
-        <p>Nothing to See Here</p> :
-        this.props.comments.map( (comment, idx) => {
+        const songComments = this.props.comments.filter(comment => comment.song_id === Number(this.props.match.params.id));
+        const currentUserId = this.props.currentUser.id;
 
-            let deleteButton = comment.commenter.id === this.props.currentUser.id ?
-            <div className  = "delete-container">
-                <FaTrash onClick = {() => deleteComment(comment.id)} className = "delete-comment"/> 
-            </div> : null;
-            
+        let commentThread = this.props.comments.length < 1 ? 
+        <p>Nothing to See Here</p> : songComments.map((comment, idx) => {
+
+            let deleteButton = comment.commenter.id === currentUserId ?
+
+                <div className  = "delete-container">
+                    <FaTrash onClick = {() => deleteComment(comment.id)} className = "delete-comment"/> 
+                </div> : null;
+        
             return (
+        
                 <li key = {`comment-${idx}`} className = "comment-item">        
                     <div className = "comment-item-left">
                         <Link to = {`/users/${comment.commenter.id}`}>
@@ -39,16 +46,15 @@ class CommentThread extends React.Component {
                     </div>              
                 </li>
             )
+        })
 
-        });
-
-        let commentCount = this.props.comments.length > 0 ?
+        let commentCount = songComments.length > 0 ?
             <div className = "comment-number">
                 <FaRegComment className='comment-icon'/>
-                <span className = "comment-count">{this.props.comments.length} comments</span>
+                <span className = "comment-count">{songComments.length} comments</span>
             </div> :
             null;
-        
+            
         return (
             <div className = "comment-thread-container">
                 <div className = "song-uploader-info">
