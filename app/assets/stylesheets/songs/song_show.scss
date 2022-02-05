@@ -110,10 +110,6 @@
     cursor: default;
 }
 
-.related-genre-list {
-    border-bottom: 1px solid lightgray;
-}
-
 .related-genre-item {
     display: flex;
     padding-bottom: 10px;
@@ -200,4 +196,8 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
     font-weight: 100;
+}
+
+.show-page-right .sidebar-links {
+    border-top: 1px solid lightgray;
 }

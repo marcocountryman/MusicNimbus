@@ -158,3 +158,19 @@
 .comment-item:hover .delete-container {
     visibility: visible;
 }
+
+.no-comment-image {
+    width: 80%;
+    height: 50%;
+}
+
+.no-comment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.no-comment-message {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-bottom: 10px;
+}

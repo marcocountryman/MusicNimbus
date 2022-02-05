@@ -2,6 +2,7 @@ import React from 'react';
 import { FaRegComment, FaTrash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
+
 class CommentThread extends React.Component {
 
     constructor(props) {
@@ -15,8 +16,8 @@ class CommentThread extends React.Component {
         const { deleteComment } = this.props;
         const songComments = this.props.comments.filter(comment => comment.song_id === Number(this.props.match.params.id));
         const currentUserId = this.props.currentUser.id;
-
-        let commentThread = this.props.comments.length > 0  ? 
+        
+        let commentThread = songComments.length > 0  ? 
         
         songComments.map((comment, idx) => {
 
@@ -49,15 +50,18 @@ class CommentThread extends React.Component {
                     </div>
                 </li>
             ) 
-        }) :  <p>Nothing to See Here</p>;
-
-        let commentCount = songComments.length > 0 ?
+        }) :  
+        <div className = "no-comment-container">
+            <span className = "no-comment-message">Be the first to drop a comment!</span>
+            <img src= "https://music-nimbus-seeds.s3.amazonaws.com/comment_holder.jpg" alt="no-comments" className = "no-comment-image" />
+        </div>
+        
+        let commentCount =
             <div className = "comment-number">
                 <FaRegComment className='comment-icon'/>
                 <span className = "comment-count">{songComments.length} comments</span>
-            </div> :
-            null;
-            
+            </div> 
+        
         return (
             <div className = "comment-thread-container">
                 <div className = "song-uploader-info">
