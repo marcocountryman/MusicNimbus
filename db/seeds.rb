@@ -6,15 +6,45 @@ ActiveRecord::Base.connection.reset_pk_sequence!('users')
 ActiveRecord::Base.connection.reset_pk_sequence!('songs')
 
 user1 = User.create!(email: "hunter12@hotmail.com", password: "hunter12", age: 28, displayname: "Esteemed Guest")
-user2 = User.create!(email: "therealjoebiden@hotmail.com", password: "hunter12", age: 32, displayname: "Joe Biden")
-user3 = User.create!(email: "mrcelebrity.com", password: "hunter12", age: 19, displayname: "George Bush")
-user4 = User.create!(email: "justinbieberfan@hotmail.com", password: "hunter12", age: 22, displayname: "Bill Clinton")
-user5 = User.create!(email: "islandlover@hotmail.com", password: "hunter12", age: 33, displayname: "Al Gore")
-user6 = User.create!(email: "mrworldwide@hotmail.com", password: "hunter12", age: 21, displayname: "Sara Palin")
-user7 = User.create!(email: "mrsworldwide@hotmail.com", password: "hunter12", age: 23, displayname: "John Kerry")
-user8 = User.create!(email: "sayitaintso@hotmail.com", password: "hunter12", age: 24, displayname: "Ted Cruz")
-user9 = User.create!(email: "helloworld@hotmail.com", password: "hunter12", age: 26, displayname: "Marco Rubio")
-user10 = User.create!(email: "superprops@hotmail.com", password: "hunter12", age: 27, displayname: "Mitt Romney")
+user2 = User.create!(email: "therealjoebiden@hotmail.com", password: "hunter12", age: 32, displayname: "Slim Shady")
+user3 = User.create!(email: "mrcelebrity@hotmail.com", password: "hunter12", age: 19, displayname: "Cash Money")
+user4 = User.create!(email: "justinbieberfan@hotmail.com", password: "hunter12", age: 22, displayname: "Flowsik")
+user5 = User.create!(email: "islandlover@hotmail.com", password: "hunter12", age: 33, displayname: "Beat Killah")
+user6 = User.create!(email: "mrworldwide@hotmail.com", password: "hunter12", age: 21, displayname: "Big Daddy")
+user7 = User.create!(email: "mrsworldwide@hotmail.com", password: "hunter12", age: 23, displayname: "El Poet")
+user8 = User.create!(email: "sayitaintso@hotmail.com", password: "hunter12", age: 24, displayname: "Hustle Mike")
+user9 = User.create!(email: "helloworld@hotmail.com", password: "hunter12", age: 26, displayname: "DJ DJ")
+user10 = User.create!(email: "superprops@hotmail.com", password: "hunter12", age: 27, displayname: "Funk Master")
+
+userimage1 = URI.open('https://music-nimbus-seeds.s3.amazonaws.com/50cent.jpg');
+user1.photo.attach(io: userimage1, filename: '50cent.jpg');
+
+userimage2 = URI.open('https://music-nimbus-seeds.s3.amazonaws.com/aaliyah.jpg');
+user2.photo.attach(io: userimage2, filename: 'aaliyah.jpg');
+
+userimage3 = URI.open('https://music-nimbus-seeds.s3.amazonaws.com/biggie.jpg');
+user3.photo.attach(io: userimage3, filename: 'biggie.jpg');
+
+userimage4 = URI.open('https://music-nimbus-seeds.s3.amazonaws.com/catriona.jpg');
+user4.photo.attach(io: userimage4, filename: 'catriona.jpg');
+
+userimage4 = URI.open('https://music-nimbus-seeds.s3.amazonaws.com/eminem.jpg');
+user5.photo.attach(io: userimage4, filename: 'eminem.jpg');
+
+userimage6 = URI.open('https://music-nimbus-seeds.s3.amazonaws.com/jhene.jpg');
+user6.photo.attach(io: userimage6, filename: 'jhene.jpg');
+
+userimage7 = URI.open('https://music-nimbus-seeds.s3.amazonaws.com/kellyrowland.jpg');
+user7.photo.attach(io: userimage7, filename: 'kellyrowland.jpg');
+
+userimage8 = URI.open('https://music-nimbus-seeds.s3.amazonaws.com/neyo.jpg');
+user8.photo.attach(io: userimage8, filename: 'neyo.jpg');
+
+userimage9 = URI.open('https://music-nimbus-seeds.s3.amazonaws.com/tupac.jpg');
+user9.photo.attach(io: userimage9, filename: 'tupac.jpg');
+
+
+
 
 song1 = Song.create!(title: "After Midnight", artist: "Julius H", genre: 'Jazz', uploader_id: user1.id)
 image1 = URI.open('https://music-nimbus-seeds.s3.amazonaws.com/jazz-art.jpg')
@@ -165,6 +195,8 @@ image25 = URI.open('https://music-nimbus-seeds.s3.amazonaws.com/trap-art.jpg')
 song25.image_file.attach(io: image25, filename: 'trap-art.jpg')
 sound25 = URI.open('https://music-nimbus-seeds.s3.amazonaws.com/knockout-blow.mp3')
 song25.audio_file.attach(io: sound25, filename: 'knockout-blow.mp3')
+
+
 
 
 #SONG CREDITS PUT THIS ON THE FRONT END
