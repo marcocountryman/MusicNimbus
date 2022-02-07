@@ -1,6 +1,4 @@
 import React from 'react';
-import NavBarContainer from '../navbar/nav_bar_container';
-import SongPlayerContainer from '../song_player/song_player_container';
 
 class UploadForm extends React.Component {
 
@@ -38,7 +36,8 @@ class UploadForm extends React.Component {
         if (this.state.audioFile) {
             formData.append('song[audio_file]', this.state.audioFile);
         }
-        this.props.createSong(formData).then(() => this.props.history.push('./discover'))
+        
+        this.props.createSong(formData).then(() => this.props.history.push('/discover'))
     }
 
 
@@ -82,8 +81,7 @@ class UploadForm extends React.Component {
     }
 
     render() {
-        console.log(this.state)
-
+       
         const prev = this.state.preview ? <img src = {this.state.preview} className = "preview-image"/> 
         : <img src = 'https://music-nimbus-seeds.s3.amazonaws.com/preview.jpg' className = "preview-image"/>;
 

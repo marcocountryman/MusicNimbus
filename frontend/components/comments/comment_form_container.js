@@ -3,7 +3,7 @@ import { createComment } from '../../action/comment_actions';
 import CommentForm from "./comment_form";
 import { withRouter } from "react-router-dom";
 import { openModal } from '../../action/modal_actions';
-import { fetchSong } from "../../action/song_actions";
+import { fetchSong,deleteSong } from "../../action/song_actions";
 
 const mSTP = (state, ownProps) => {
 
@@ -17,8 +17,9 @@ const mDTP = dispatch => {
 
     return {
         createComment: comment => dispatch(createComment(comment)),
-        openModal: modal => dispatch(openModal(modal)),
-        fetchSong: songId => dispatch(fetchSong(songId))
+        openModal: (modal,id )=> dispatch(openModal(modal,id)),
+        fetchSong: songId => dispatch(fetchSong(songId)),
+        deleteSong: songId => dispatch(deleteSong(songId))
     };
 };
 

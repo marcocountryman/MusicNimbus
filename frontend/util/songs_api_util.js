@@ -13,7 +13,7 @@ export const fetchSong = (songId) => {
 };
 
 export const createSong = (formData) => {
-    
+
     return $.ajax({
         method: 'POST',
         url: `/api/songs`,
@@ -24,11 +24,11 @@ export const createSong = (formData) => {
 };
 
 export const updateSong = (song) => {
-
+    
     return $.ajax({
         method: 'PATCH',
         url: `/api/songs/${song.get(['song[id]'])}`,
-        data: updateSong,
+        data: song,
         contentType: false,
         processData: false
     });

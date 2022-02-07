@@ -67,6 +67,19 @@
     border: 1px solid black;
 }
 
+.delete-song-button {
+    width: 13%;
+    background-color: white;
+    border: 1px solid lightgrey;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-song-button:hover {
+    border: 1px solid black;
+}
+
 .comment-uploader-pic {
     width: 100px;
     height: 100px;

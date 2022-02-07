@@ -8,8 +8,9 @@ const mSTP = (state, ownProps) => {
 
     return {
         currentUser: state.entities.users[state.session.id],
-        errors: state.errors.song,
-        song: state.entities.songs[ownProps.match.params.id]
+        errors: state.errors.songs,
+        modalId: state.ui.modalId,
+        song: state.entities.songs[state.ui.modalId]
     }
 };
 

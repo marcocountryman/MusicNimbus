@@ -68,7 +68,7 @@ export const createSong = song => dispatch => {
 
 export const updateSong = (song) => dispatch => {
 
-    return SongApiUtil.updateSong(currentSong, updateSong).then(song => (
+    return SongApiUtil.updateSong(song).then(song => (
         dispatch(receiveSong(song))
     ), error => (
         dispatch(receiveSongErrors(error.responseJSON))

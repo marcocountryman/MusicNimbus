@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaRegComment, FaBars } from 'react-icons/fa';
+import { FaRegComment, FaBars, FaTrash } from 'react-icons/fa';
 
 class CommentForm extends React.Component {
     constructor(props) {
@@ -39,11 +39,18 @@ class CommentForm extends React.Component {
     }
 
     render() {
+        const songId = this.props.match.params.id;
         
         let editButton = this.props.song.uploader_id === this.props.currentUser.id ? 
-            <button onClick = {() => this.props.openModal('update')} className = "update-song-button">
-                Edit Song
+            <button onClick = {() => this.props.openModal('update', songId)} className = "update-song-button">
                 <FaBars/>
+                Edit Song
+            </button> : null;
+
+        let deleteButton = this.props.song.uploader_id === this.props.currentUser.id ?
+            <button onClick = {() => this.props.deleteSong(songId).then(() => this.props.history.push('/discover'))} className = "delete-song-button">
+                <FaTrash/>
+                Delete Song
             </button> : null;
 
         return (
@@ -62,10 +69,11 @@ class CommentForm extends React.Component {
                 </div>
                 <div className = "comment-button-container">
                      <button onClick = {this.handleSubmit} className = "comment-button">
-                        Comment
                         <FaRegComment/>
+                        Comment
                     </button>
                     {editButton}
+                    {deleteButton}
                 </div>
                 
             </div>
