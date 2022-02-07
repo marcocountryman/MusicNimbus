@@ -14,7 +14,9 @@ const mDTP = (dispatch) => {
 
     return {
         fetchSong: songId => dispatch(fetchSong(songId)),
-        fetchAllSongs: () => dispatch(fetchAllSongs())
+        fetchAllSongs: () => dispatch(fetchAllSongs()),
+        deleteSong: songId => dispatch(deleteSong()),
+        updateSong: song => dispatch(updateSong(song))
     }
 }
 
