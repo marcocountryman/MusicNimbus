@@ -22,7 +22,6 @@ class SongShow extends React.Component {
         if (!this.props.song) return null;
 
         const relatedGenre = this.props.songs.filter(song => song.genre === this.props.song.genre && song.id !== this.props.song.id);
-        shuffle(relatedGenre)
         const genreItems = relatedGenre.slice(0,3);
         const renderGenreItems = genreItems.map( (song, idx) => {
            return ( 
