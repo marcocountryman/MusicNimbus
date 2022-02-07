@@ -35,7 +35,7 @@ class CommentForm extends React.Component {
     }
 
     render() {
-
+        
         return (
             <div className = "comment-form-container">
                 <div className = "comment-section">
@@ -54,6 +54,9 @@ class CommentForm extends React.Component {
                      <button onClick = {this.handleSubmit} className = "comment-button">
                         Comment
                         <FaRegComment/>
+                    </button>
+                    <button onClick = {() => this.props.openModal('update')}>
+                        Edit
                     </button>
                 </div>
                 

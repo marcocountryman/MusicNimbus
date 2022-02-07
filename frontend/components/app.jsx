@@ -14,21 +14,18 @@ import NavBarContainer from './navbar/nav_bar_container';
 const App = () => {
 
     return (
-        <div className = "app">
+        <div className = "app"> 
             <Modal/>
-            
+
             <ProtectedRoute path = "/" component={SongPlayerContainer} />
             <ProtectedRoute path = "/" component = {NavBarContainer} />
             
             <Switch>
-
-           
                 <AuthRoute exact path= "/" component={Splash}/>
                 <ProtectedRoute path="/discover" component={Discover} />
                 <ProtectedRoute path="/upload" component={UploadFormContainer} />
                 <ProtectedRoute path="/users/:userId" component={UserShowContainer} />
                 <ProtectedRoute path="/songs/:id" component={SongShowContainer} />
-                
             </Switch> 
 
         </div>

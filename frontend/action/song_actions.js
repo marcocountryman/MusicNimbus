@@ -66,7 +66,7 @@ export const createSong = song => dispatch => {
     ))
 };
 
-export const updateSong = (currentSong, updateSong) => dispatch => {
+export const updateSong = (song) => dispatch => {
 
     return SongApiUtil.updateSong(currentSong, updateSong).then(song => (
         dispatch(receiveSong(song))

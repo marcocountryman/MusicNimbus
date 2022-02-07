@@ -3,9 +3,9 @@ import LoginFormContainer from '../session/login_form_container';
 import SignupFormContainer from '../session/signup_form_container';
 import { connect } from 'react-redux';
 import { closeModal } from '../../action/modal_actions';
+import UpdateFormContainer from '../update/update_form_container';
 
 const Modal = ({modal, closeModal}) => {
-    
 
     if (!modal) {
         return null;
@@ -20,6 +20,10 @@ const Modal = ({modal, closeModal}) => {
         component = <SignupFormContainer/>;
         break;
 
+        case 'update':
+        component = <UpdateFormContainer/>;
+        break;
+        
         default:
             return null;
     };

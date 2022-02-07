@@ -23,12 +23,11 @@ export const createSong = (formData) => {
     });
 };
 
-export const updateSong = (currentSong, updateSong) => {
+export const updateSong = (song) => {
 
-    
     return $.ajax({
         method: 'PATCH',
-        url: `/api/songs/${currentSong.id}`,
+        url: `/api/songs/${song.get(['song[id]'])}`,
         data: updateSong,
         contentType: false,
         processData: false
