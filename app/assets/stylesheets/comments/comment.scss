@@ -51,6 +51,20 @@
 .comment-button-container {
     padding-bottom: 10px;
     border-bottom: 1px solid lightgrey;
+    display: flex;
+}
+
+.update-song-button {
+    width: 11%;
+    background-color: white;
+    border: 1px solid lightgrey;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.update-song-button:hover {
+    border: 1px solid black;
 }
 
 .comment-uploader-pic {
