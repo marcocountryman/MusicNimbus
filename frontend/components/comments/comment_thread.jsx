@@ -12,6 +12,7 @@ class CommentThread extends React.Component {
     componentDidMount() {
         this.props.fetchAllComments();
     }
+    
     render() {
         const { deleteComment } = this.props;
         const songComments = this.props.comments.filter(comment => comment.song_id === Number(this.props.match.params.id));
@@ -61,7 +62,7 @@ class CommentThread extends React.Component {
                 <FaRegComment className='comment-icon'/>
                 <span className = "comment-count">{songComments.length} comments</span>
             </div> 
-        
+    
         return (
             <div className = "comment-thread-container">
                 <div className = "song-uploader-info">

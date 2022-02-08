@@ -16,7 +16,7 @@ export const deleteComment = (commentId) => {
 };
 
 export const fetchAllComments = () => {
-
+    
     return $.ajax({
         url: '/api/comments'
     })
