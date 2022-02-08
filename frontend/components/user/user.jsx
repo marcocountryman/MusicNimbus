@@ -98,7 +98,7 @@ class UserShow extends React.Component {
                                 <span className = "uploaded-song-num">{userSongs.length}</span>
                             </div>
 
-                            <span className = "user-comment-label">{this.props.user.displayname}'s Recent Comments</span>
+                            {/* <span className = "user-comment-label">{this.props.user.displayname}'s Recent Comments</span> */}
                             {/* <ul className = "user-comment-list">
                                 {commentItems}
                             </ul> */}
