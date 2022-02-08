@@ -35,8 +35,10 @@
 }
 
 .genre-container {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
     padding-left: 15px;
+    border-bottom: 1px solid lightgray;
 }
 
 .discover-images {
@@ -202,8 +204,6 @@ a .suggested-title {
     left: 60px;
     cursor: pointer;  
 }
-
-
 
 .song-container {
     display: flex;
