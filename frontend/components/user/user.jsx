@@ -61,16 +61,16 @@ class UserShow extends React.Component {
         </button>
 
         const userComments = this.props.comments.filter(comment => comment.commenter_id === this.props.user.id).slice(this.props.comments.length - 4);
-        let commentItems = userComments.length > 0 ? userComments.map((comment,idx) => {
+        let commentItems =  userComments.map((comment,idx) => {
             return (
                     <li className = "user-comment-list-item" key = {`comment=${idx}`}>
                         <Link to = {`/songs/${comment.song_id}`}>
-                             <span>"{comment.body}"</span>
+                            <span>"{comment.body}"</span>
                             <span>{comment.posted} ago</span>
                         </Link>
                     </li>  
             ) 
-        }) : <span className = "no-comment">{this.props.user.displayname} has no comments.</span>
+        });
         
         return (
             <div className = "user-content-container">
