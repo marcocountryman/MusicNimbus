@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { shuffle } from '../../util/misc_util';
 import PlayButtonContainer from '../play_button/play_button_container';
 import CommentFormContainer from '../comments/comment_form_container';
 import CommentThreadContainer from '../comments/comment_thread_container';
@@ -15,6 +14,7 @@ class SongShow extends React.Component {
     componentDidMount() {
        this.props.fetchSong(this.props.match.params.id);
        this.props.fetchAllSongs();
+       this.props.fetchAllComments();
     }
 
     render() {

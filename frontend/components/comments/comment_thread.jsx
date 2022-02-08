@@ -63,7 +63,7 @@ class CommentThread extends React.Component {
                 <FaRegComment className='comment-icon'/>
                 <span className = "comment-count">{songComments.length} comments</span>
             </div> 
-        
+    
         return (
             <div className = "comment-thread-container">
                 <div className = "song-uploader-info">

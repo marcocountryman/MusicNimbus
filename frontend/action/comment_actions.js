@@ -41,7 +41,7 @@ export const deleteComment = commentId => dispatch => {
 }
 
 export const fetchAllComments = () => dispatch => {
-
+    
     return CommentApiUtil.fetchAllComments()
     .then(comments => dispatch(receiveAllComments(comments)))
     

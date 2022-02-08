@@ -6,7 +6,7 @@ const songsErrorsReducer = (state = [], action) => {
 
     switch(action.type) {
         case RECEIVE_SONG_ERRORS:
-            debugger
+            
             return action.errors;
 
         case REMOVE_SONG_ERRORS:
