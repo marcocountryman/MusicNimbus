@@ -3,6 +3,7 @@ import PlayButtonContainer from '../play_button/play_button_container';
 import { Link } from 'react-router-dom';
 import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa";
 import { FaTrash } from 'react-icons/fa';
+import UserCommentsContainer from './user_comments';
 
 class UserShow extends React.Component {
 
@@ -60,17 +61,7 @@ class UserShow extends React.Component {
         Upload Your First Song!
         </button>
 
-        const userComments = this.props.comments.filter(comment => comment.commenter_id === this.props.user.id).slice(this.props.comments.length - 4);
-        let commentItems =  userComments.map((comment,idx) => {
-            return (
-                    <li className = "user-comment-list-item" key = {`comment=${idx}`}>
-                        <Link to = {`/songs/${comment.song_id}`}>
-                            <span>"{comment.body}"</span>
-                            <span>{comment.posted} ago</span>
-                        </Link>
-                    </li>  
-            ) 
-        });
+      
         
         return (
             <div className = "user-content-container">
@@ -108,9 +99,10 @@ class UserShow extends React.Component {
                             </div>
 
                             <span className = "user-comment-label">{this.props.user.displayname}'s Recent Comments</span>
-                            <ul className = "user-comment-list">
+                            {/* <ul className = "user-comment-list">
                                 {commentItems}
-                            </ul>
+                            </ul> */}
+                            <UserCommentsContainer/>
                             <span className = "nimbus-creator">Meet the Creator</span>
                             <div className = "sidebar-container">
                                 <div className = "sidebar-links">
