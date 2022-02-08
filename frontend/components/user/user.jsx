@@ -17,12 +17,12 @@ class UserShow extends React.Component {
     }
 
     render() {
-
         if (!this.props.user) return null;
+
         const currentUserId = this.props.currentUserId;
         const userSongs = this.props.songs.filter(song => song.uploader_id === this.props.user.id)
        
-        const songItems = userSongs.map((song,idx) => {
+        const songItems = userSongs.length > 0 ? userSongs.map((song,idx) => {
             let num = idx + 1;
             let deleteButton = song.uploader_id === currentUserId ? 
             <FaTrash className = "delete-song" onClick = {() => this.props.deleteSong(song.id)}/> : null;
@@ -53,7 +53,12 @@ class UserShow extends React.Component {
                     {deleteButton}
                 </li>
             )
-        })
+        }) : <button 
+        onClick = {() => this.props.history.push('/upload')}
+        className = "first-upload"
+        >
+        Upload Your First Song!
+        </button>
 
         const userComments = this.props.comments.filter(comment => comment.commenter_id === this.props.user.id).slice(this.props.comments.length - 4);
         let commentItems = userComments.length > 0 ? userComments.map((comment,idx) => {
@@ -66,6 +71,7 @@ class UserShow extends React.Component {
                     </li>  
             ) 
         }) : <span className = "no-comment">{this.props.user.displayname} has no comments.</span>
+        
         return (
             <div className = "user-content-container">
                 <div className = "user-top">

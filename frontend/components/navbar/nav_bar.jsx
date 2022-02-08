@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import { FaUserNinja } from 'react-icons/fa';
 
 class NavBar extends React.Component {
 
@@ -26,7 +27,7 @@ class NavBar extends React.Component {
                     <div className = "right-nav">
                         <Link to = "/upload" className = "nav-upload">Upload</Link>
                         <div className = "nav-user-info">
-                            <i className='fas fa-user-astronaut'></i>
+                            <FaUserNinja/>
                             <Link to = {`/users/${this.props.currentUser.id}`}className = "nav-displayname">
                                 {this.props.currentUser.displayname}
                             </Link>

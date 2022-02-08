@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import SongShow from './song_show';
-import { fetchSong, deleteSong } from '../../action/song_actions';
 
 const mSTP = (state, ownProps) => {
 

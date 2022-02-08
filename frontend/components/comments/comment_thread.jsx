@@ -10,9 +10,11 @@ class CommentThread extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchAllComments();
+        this.props.fetchAllComments()
     }
+    
     render() {
+ 
         const { deleteComment } = this.props;
         const songComments = this.props.comments.filter(comment => comment.song_id === Number(this.props.match.params.id));
         const currentUserId = this.props.currentUser.id;
