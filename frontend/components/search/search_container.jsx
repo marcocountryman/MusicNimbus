@@ -5,15 +5,15 @@ import SearchBar from './search';
 const mSTP = (state) => {
 
     return {
-
+        songs: state.entities.songs
     }
 }
 
-const mDTP = (dispatch) => {
+// const mDTP = (dispatch) => {
 
-    return {
+//     return {
 
-    }
-}
+//     }
+// }
 
-export default withRouter(connect(mSTP,mDTP)(SearchBar))
+export default withRouter(connect(mSTP,null)(SearchBar))
