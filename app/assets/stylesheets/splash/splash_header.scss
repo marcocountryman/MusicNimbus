@@ -8,7 +8,8 @@ body {
 }
 
 .header-content {
-    background-image: url('https://music-nimbus-seeds.s3.amazonaws.com/concert.jpg');
+    // background-image: url('https://music-nimbus-seeds.s3.amazonaws.com/concert.jpg');
+    background-image: url('https://music-nimbus-seeds.s3.amazonaws.com/splash-background-rapper.jpg');
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -16,7 +17,7 @@ body {
     padding: 25px 25px;
     background-size: 100% 100%;
     background-position: center;
-    border-top: 5px solid #ff004f;
+    border-top: 5px solid #FF0096;
 }
 .header-buttons {
     display: flex;
@@ -47,7 +48,7 @@ body {
 }
 .signup-btn {
     text-decoration: none;
-    background-color: #ff004f;
+    background-color: #FF0096;
     font-size: 15px;
     height: 30px;
     width: auto;
@@ -70,9 +71,9 @@ button {
 .splash-logo {
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 26px;
-    padding-bottom: 300px;
+    font-size: 38px;
+    padding-bottom: 270px;
     display: flex;
     justify-content: center;
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 4px 4px 4px black;
 }
