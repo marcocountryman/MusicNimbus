@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { FaUserNinja } from 'react-icons/fa';
+import SearchBarContainer from '../search/search_container';
 
 class NavBar extends React.Component {
 
@@ -24,6 +25,9 @@ class NavBar extends React.Component {
                         </div>
                     </div>
 
+                    <div className = "nav-search-container">
+                        <SearchBarContainer/>
+                    </div>
                     <div className = "right-nav">
                         <Link to = "/upload" className = "nav-upload">Upload</Link>
                         <div className = "nav-user-info">
