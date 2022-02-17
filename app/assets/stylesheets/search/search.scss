@@ -1,0 +1,31 @@
+.search-icon {
+    background-color: white;
+    font-size: 12px;
+    padding-right: 5px;
+    color: lightgray;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.search-input {
+    border: none;
+    padding-left: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: lightgray;
+    font-size: 13px;
+    width: 90%;
+}
+
+.searchbar-container {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 50%;
+    border-radius: 4px;
+}
+
+.nav-search-container {
+    width: 25%;
+}
