@@ -9,13 +9,22 @@ class SearchBar extends React.Component {
             active: false,
             search: ""
         }
+
+        this.setSearch = this.setSearch.bind(this);
     }
 
+    setSearch(e) {
+        this.setState({ search: e.target.value })
+    }
 
     render() {
         return(
             <div className = "searchbar-container">
-                <input type="text" placeholder = "Search" className = "search-input"/>
+                <input type="text" 
+                placeholder = "Search" 
+                className = "search-input"
+                onChange = {this.setSearch}
+                />
                 <FaSearch className = "search-icon"/>
             </div>
         )

@@ -8,8 +8,8 @@ body {
 }
 
 .header-content {
-    // background-image: url('https://music-nimbus-seeds.s3.amazonaws.com/concert.jpg');
-    background-image: url('https://music-nimbus-seeds.s3.amazonaws.com/splash-background-rapper.jpg');
+    background-image: url('https://music-nimbus-seeds.s3.amazonaws.com/concert.jpg');
+    // background-image: url('https://music-nimbus-seeds.s3.amazonaws.com/splash-background-rapper.jpg');
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -71,7 +71,7 @@ button {
 .splash-logo {
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 38px;
+    font-size: 28px;
     padding-bottom: 270px;
     display: flex;
     justify-content: center;
