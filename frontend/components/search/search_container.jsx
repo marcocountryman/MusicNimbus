@@ -5,7 +5,7 @@ import SearchBar from './search';
 const mSTP = (state) => {
 
     return {
-        songs: state.entities.songs
+        songs: Object.values(state.entities.songs)
     }
 }
 
