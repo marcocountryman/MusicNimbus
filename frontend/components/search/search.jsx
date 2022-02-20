@@ -20,8 +20,8 @@ class SearchBar extends React.Component {
     render() {
         
         return(
-            
-            <div className = "searchbar-container">
+            <div>
+                <div className = "searchbar-container">
                 <input type="text" 
                 placeholder = "Search" 
                 className = "search-input"
@@ -29,6 +29,9 @@ class SearchBar extends React.Component {
                 />
                 <FaSearch className = "search-icon"/>
             </div>
+
+            </div>
+          
         )
     }
 }
