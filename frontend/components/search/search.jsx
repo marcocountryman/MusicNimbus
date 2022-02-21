@@ -28,8 +28,10 @@ class SearchBar extends React.Component {
                 onChange = {this.setSearch}
                 />
                 <FaSearch className = "search-icon"/>
-            </div>
-
+                </div>
+                <div>
+                    
+                </div>
             </div>
           
         )
