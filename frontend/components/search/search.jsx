@@ -30,7 +30,7 @@ class SearchBar extends React.Component {
                 <FaSearch className = "search-icon"/>
                 </div>
                 <div className = {}>
-                        SEARCH Working?
+                        SEARCH
                 </div>
             </div>
           
